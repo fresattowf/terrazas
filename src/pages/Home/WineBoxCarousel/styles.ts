@@ -6,6 +6,8 @@ export const Container = styled.div`
 
   background-image: url(${GrayBackground});
   background-size: cover;
+
+  padding-bottom: 45px;
 `;
 
 export const CarouselItemWrapper = styled.div`
