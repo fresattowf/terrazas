@@ -15,15 +15,10 @@ const WinesCarouselSection: React.FC = () => {
         autoPlay={false}
         showArrows={false}
         showStatus={false}
-      >
-        <p>AUSHUDHAS</p>
-        <p>AUSHUDHAS</p>
-      </Carousel>
+      ></Carousel>
 
       <ContentContainer>
-        {wines.map((wine) => (
-          <WineDetails key={wine.name} data={wine} />
-        ))}
+        <WineDetails data={wines[0]} />
       </ContentContainer>
     </Container>
   );
