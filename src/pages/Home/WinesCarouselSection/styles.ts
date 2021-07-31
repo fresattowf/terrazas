@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-import WineColorBackground from "../../../images/wine-texture.jpg";
-import YellowColorBackground from "../../../images/yellow-texture.jpg";
-
-import BottomDistortionImage from "../../../images/bottom-distorted.png";
-import BottomDistortionImage2 from "../../../images/bottom-distorted-2.png";
-
 export const Container = styled.div``;
 
 export const BottleWrapper = styled.div`
