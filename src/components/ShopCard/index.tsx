@@ -5,20 +5,18 @@ import { Container, LogoImage, Divider, WineImage, ShopButton } from "./styles";
 interface ShopCardProps {
   data: {
     shopImage: string;
-    wineImage: string;
     name: string;
     percentDiscount: number;
     linkToShop: string;
   };
 }
 
-const ShopCard: React.FC = ({ ...rest }) => {
+const ShopCard: React.FC<ShopCardProps> = ({ data, ...rest }) => {
+  const { shopImage, name, percentDiscount, linkToShop } = data;
+
   return (
     <Container {...rest}>
-      <LogoImage
-        src="https://superon.lifeapps.com.br/images/logos/commerce/b9ed2691-61aa-4b9c-8276-8ef38a11f54d"
-        alt="Casa"
-      />
+      <LogoImage src={shopImage} alt={name} />
 
       <Divider />
       <WineImage
@@ -28,9 +26,9 @@ const ShopCard: React.FC = ({ ...rest }) => {
       <Divider />
 
       <span>Linha Terrazas Reserva</span>
-      <strong>10% OFF</strong>
+      <strong>{percentDiscount}% OFF</strong>
 
-      <ShopButton href="" target="_blank">
+      <ShopButton href={linkToShop} target="_blank">
         Comprar
       </ShopButton>
     </Container>
