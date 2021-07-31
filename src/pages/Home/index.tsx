@@ -2,9 +2,15 @@ import React from "react";
 
 import Logo from "../../images/logo.png";
 
-import { Container, StyledContentContainer, TerrazasImage } from "./styles";
+import {
+  Container,
+  StyledContentContainer,
+  TerrazasImage,
+  StripeBG,
+} from "./styles";
 import { WineBoxCarousel } from "./WineBoxCarousel";
 import { BuyYourTerrazas } from "./BuyYourTerrazas";
+import { VideoSection } from "./VideoSection";
 
 const Home: React.FC = () => {
   return (
@@ -19,6 +25,10 @@ const Home: React.FC = () => {
       <WineBoxCarousel />
 
       <BuyYourTerrazas />
+
+      <StripeBG>
+        <VideoSection />
+      </StripeBG>
     </Container>
   );
 };
