@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ShopCard from "../../../components/ShopCard";
 
 export const Container = styled.div`
   padding: 30px 0;
@@ -15,6 +16,10 @@ export const Container = styled.div`
 
     margin-bottom: 30px;
   }
+`;
+
+export const StyledShopCard = styled(ShopCard)`
+  margin: 0 auto;
 `;
 
 export const Footer = styled.footer`
