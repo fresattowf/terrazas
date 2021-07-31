@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import ContentContainer from "../../components/ContentContainer";
 
-export const Container = styled(ContentContainer)`
+export const StyledContentContainer = styled(ContentContainer)`
   > h1,
   > h2 {
     font-family: "Merriweather", serif;
