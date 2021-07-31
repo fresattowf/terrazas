@@ -11,6 +11,7 @@ import {
 import { WineBoxCarousel } from "./WineBoxCarousel";
 import { BuyYourTerrazas } from "./BuyYourTerrazas";
 import { VideoSection } from "./VideoSection";
+import { WinesCarouselSection } from "./WinesCarouselSection";
 
 const Home: React.FC = () => {
   return (
@@ -28,6 +29,8 @@ const Home: React.FC = () => {
 
       <StripeBG>
         <VideoSection />
+
+        <WinesCarouselSection />
       </StripeBG>
     </Container>
   );
