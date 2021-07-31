@@ -3,19 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
   :root {
     --wine: #A50034;
-
-    --white-text-title: #FFFFFF;
-
-    --gray-text-body: #A3A3A3;
-    --black-text-body: #413906;
-
-    --price-value: #C8C6CD;
-    --price-month: #9FA5B6;
-
-    --background: #1E2025;
-    --background-300: #41424E;
-
-    --plan-background: #434450;
+    --gold: #835c12;
   }
  
   * {    
