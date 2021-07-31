@@ -4,6 +4,7 @@ export default createGlobalStyle`
   :root {
     --wine: #A50034;
     --gold: #835c12;
+    --gold-light: #BE9850;
   }
  
   * {    
