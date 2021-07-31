@@ -13,6 +13,7 @@ const BuyYourTerrazas: React.FC = () => {
       <Carousel
         showArrows={false}
         autoPlay={true}
+        showIndicators={false}
         showStatus={false}
         interval={5000000}
       >

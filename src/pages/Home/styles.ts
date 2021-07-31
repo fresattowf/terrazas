@@ -1,6 +1,16 @@
 import styled from "styled-components";
 import ContentContainer from "../../components/ContentContainer";
 
+import HeaderBGMobile from "../../images/header-bg-mobile.png";
+
+export const Container = styled.div`
+  background-image: url(${HeaderBGMobile});
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  padding-top: 160px;
+`;
+
 export const StyledContentContainer = styled(ContentContainer)`
   > h1,
   > h2 {
@@ -24,7 +34,7 @@ export const StyledContentContainer = styled(ContentContainer)`
 
 export const TerrazasImage = styled.img`
   display: block;
-  margin: 160px auto 16px;
+  margin: 0 auto 16px;
 `;
 
 export const WineBoxImage = styled.img`
