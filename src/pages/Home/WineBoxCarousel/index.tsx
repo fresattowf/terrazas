@@ -3,6 +3,11 @@ import { Carousel } from "react-responsive-carousel";
 
 import WineBoxOpened from "../../../images/wine-box-opened.png";
 import WineBoxClosed from "../../../images/wine-box-closed.png";
+import RappiImage from "../../../images/rappi.png";
+import IFoodImage from "../../../images/ifood.png";
+import IguatemiImage from "../../../images/iguatemi.png";
+import WesselImage from "../../../images/wessel.png";
+
 import {
   Container,
   CarouselItemWrapper,
@@ -10,6 +15,7 @@ import {
   Title,
   SubTitle,
   Description,
+  WhereToBuyWrapper,
 } from "./styles";
 import { WhereToBuy } from "../../../components/WhereToBuy";
 
@@ -19,24 +25,28 @@ const placesToBuy = [
     price: 319,
     available: true,
     shopLink: "http://www.google.com",
+    image: RappiImage,
   },
   {
     placeName: "ifood",
     price: 319,
     available: true,
     shopLink: "http://www.google.com",
+    image: IFoodImage,
   },
   {
     placeName: "iguatemi",
     price: 319,
     available: true,
     shopLink: "http://www.google.com",
+    image: IguatemiImage,
   },
   {
     placeName: "wessel",
     price: 319,
     available: true,
     shopLink: "http://www.google.com",
+    image: WesselImage,
   },
 ];
 
@@ -72,9 +82,11 @@ const WineBoxCarousel: React.FC = () => {
         Terrazas by Wessel.
       </Description>
 
-      {placesToBuy.map((place) => (
-        <WhereToBuy key={place.placeName} placeData={place} />
-      ))}
+      <WhereToBuyWrapper>
+        {placesToBuy.map((place) => (
+          <WhereToBuy key={place.placeName} placeData={place} />
+        ))}
+      </WhereToBuyWrapper>
     </Container>
   );
 };

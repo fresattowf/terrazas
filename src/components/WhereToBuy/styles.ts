@@ -9,6 +9,10 @@ export const Container = styled.div`
   background-color: #fff;
   padding: 16px;
 
+  margin-bottom: 10px;
+
+  box-shadow: 0px 0px 9px #00000015;
+
   img {
     width: 64px;
   }
@@ -49,4 +53,18 @@ export const Wrapper = styled.div`
       margin-top: 2px;
     }
   }
+`;
+
+export const ShopButton = styled.a`
+  display: block;
+  background-color: #000;
+  padding: 8px 20px;
+
+  color: #fff;
+  font-size: 9px;
+  text-align: center;
+
+  text-decoration: none;
+
+  border-radius: 2px;
 `;

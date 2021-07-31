@@ -1,12 +1,12 @@
 import React from "react";
-import RappiImage from "../../images/rappi.png";
-import { Container, Divider, Wrapper } from "./styles";
+import { Container, Divider, Wrapper, ShopButton } from "./styles";
 
 interface Place {
   placeName: string;
   available: boolean;
   price: number;
   shopLink: string;
+  image: string;
 }
 
 interface WhereToBuyProps {
@@ -14,9 +14,11 @@ interface WhereToBuyProps {
 }
 
 export const WhereToBuy: React.FC<WhereToBuyProps> = ({ placeData }) => {
+  const { image, shopLink } = placeData;
+
   return (
     <Container>
-      <img src={RappiImage} alt="Rappi" />
+      <img src={image} alt="Rappi" />
 
       <Divider />
 
@@ -26,7 +28,9 @@ export const WhereToBuy: React.FC<WhereToBuyProps> = ({ placeData }) => {
           <span>Disponível</span>
         </div>
 
-        <a href="">Comprar</a>
+        <ShopButton href={shopLink} target="_blank">
+          Comprar
+        </ShopButton>
       </Wrapper>
     </Container>
   );

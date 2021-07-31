@@ -56,3 +56,7 @@ export const Description = styled.p`
   font-weight: 400;
   color: var(--gold);
 `;
+
+export const WhereToBuyWrapper = styled.div`
+  margin-top: 32px;
+`;
