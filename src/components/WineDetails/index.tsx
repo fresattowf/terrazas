@@ -1,6 +1,7 @@
 import React from "react";
 
 import NudasImage from "../../images/nudas.svg";
+import GonzaloImage from "../../images/gonzalo.svg";
 import EyeImage from "../../images/eye.svg";
 import MouthImage from "../../images/mouth.svg";
 import LocationImage from "../../images/location.svg";
@@ -46,7 +47,10 @@ const WineDetails: React.FC<WineDetailsProps> = ({ data }) => {
         <Left>
           <p>{description}</p>
 
-          <img src={NudasImage} alt="Nudas" />
+          <img
+            src={owner === "gonzalo" ? GonzaloImage : NudasImage}
+            alt={owner === "gonzalo" ? "Gonzalo" : "Nudas"}
+          />
         </Left>
       )}
 
