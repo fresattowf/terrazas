@@ -18,6 +18,7 @@ import {
   WhereToBuyWrapper,
 } from "./styles";
 import { WhereToBuy } from "../../../components/WhereToBuy";
+import ContentContainer from "../../../components/ContentContainer";
 
 const placesToBuy = [
   {
@@ -53,40 +54,42 @@ const placesToBuy = [
 const WineBoxCarousel: React.FC = () => {
   return (
     <Container>
-      <Carousel
-        showArrows={false}
-        showIndicators={false}
-        autoPlay={false}
-        showStatus={false}
-      >
-        <CarouselItemWrapper>
-          <WineBoxImage src={WineBoxOpened} alt="Wine Box opened" />
-        </CarouselItemWrapper>
-        <CarouselItemWrapper>
-          <WineBoxImage
-            src={WineBoxClosed}
-            alt="Wine Box closed"
-            wrongSizeImage
-          />
-        </CarouselItemWrapper>
-      </Carousel>
+      <ContentContainer>
+        <Carousel
+          showArrows={false}
+          showIndicators={false}
+          autoPlay={false}
+          showStatus={false}
+        >
+          <CarouselItemWrapper>
+            <WineBoxImage src={WineBoxOpened} alt="Wine Box opened" />
+          </CarouselItemWrapper>
+          <CarouselItemWrapper>
+            <WineBoxImage
+              src={WineBoxClosed}
+              alt="Wine Box closed"
+              wrongSizeImage
+            />
+          </CarouselItemWrapper>
+        </Carousel>
 
-      <Title>Kit Experiência Terrazas by Wessel</Title>
+        <Title>Kit Experiência Terrazas by Wessel</Title>
 
-      <SubTitle>Procure em nossos parceiros</SubTitle>
+        <SubTitle>Procure em nossos parceiros</SubTitle>
 
-      <Description>
-        Kit Experiência Terrazas de los Andes + Wessel para o Dia dos Pais
-        contendo 1 garrafa de Terrazas Reserva Cabernet Sauvignon 750 ml, 1
-        Saca-Rolhas Terrazas, 1 Avental para Churrasco e Mini-garras aperitivo
-        Terrazas by Wessel.
-      </Description>
+        <Description>
+          Kit Experiência Terrazas de los Andes + Wessel para o Dia dos Pais
+          contendo 1 garrafa de Terrazas Reserva Cabernet Sauvignon 750 ml, 1
+          Saca-Rolhas Terrazas, 1 Avental para Churrasco e Mini-garras aperitivo
+          Terrazas by Wessel.
+        </Description>
 
-      <WhereToBuyWrapper>
-        {placesToBuy.map((place) => (
-          <WhereToBuy key={place.placeName} placeData={place} />
-        ))}
-      </WhereToBuyWrapper>
+        <WhereToBuyWrapper>
+          {placesToBuy.map((place) => (
+            <WhereToBuy key={place.placeName} placeData={place} />
+          ))}
+        </WhereToBuyWrapper>
+      </ContentContainer>
     </Container>
   );
 };
