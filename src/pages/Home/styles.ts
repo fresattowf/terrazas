@@ -7,9 +7,9 @@ import BGStripes from "../../images/bg-stripes-2.png";
 export const Container = styled.div`
   background-image: url(${HeaderBGMobile});
   background-size: contain;
+  background-position: 0 -142px;
   background-repeat: no-repeat;
-
-  padding-top: 160px;
+  padding-top: 60px;
 `;
 
 export const StyledContentContainer = styled(ContentContainer)`
@@ -46,4 +46,6 @@ export const WineBoxImage = styled.img`
 export const StripeBG = styled.div`
   background: url(${BGStripes});
   background-position: top center;
+
+  padding-bottom: 55px;
 `;

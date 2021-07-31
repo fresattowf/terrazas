@@ -26,8 +26,9 @@ export const VideoWrapper = styled.a`
 
   img {
     display: block;
-
     margin: 0 auto 12px;
+    width: 48px;
+    height: 48px;
   }
 
   strong {
@@ -36,7 +37,7 @@ export const VideoWrapper = styled.a`
     color: #fff;
     text-align: center;
 
-    margin-bottom: 8px;
+    margin-top: 16px;
   }
 
   p {
@@ -46,6 +47,7 @@ export const VideoWrapper = styled.a`
     font-weight: bold;
     text-align: center;
     color: #fff;
+    margin-top: 36px;
   }
 `;
 

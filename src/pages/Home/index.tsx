@@ -29,7 +29,6 @@ const Home: React.FC = () => {
 
       <StripeBG>
         <VideoSection />
-
         <WinesCarouselSection />
       </StripeBG>
     </Container>
