@@ -1,5 +1,12 @@
 import React from "react";
 
+import { Footer } from "../../components/Footer";
+
+import { WineBoxCarousel } from "./WineBoxCarousel";
+import { BuyYourTerrazas } from "./BuyYourTerrazas";
+import { VideoSection } from "./VideoSection";
+import { WinesCarouselSection } from "./WinesCarouselSection";
+
 import Logo from "../../images/logo.png";
 
 import {
@@ -8,10 +15,6 @@ import {
   TerrazasImage,
   StripeBG,
 } from "./styles";
-import { WineBoxCarousel } from "./WineBoxCarousel";
-import { BuyYourTerrazas } from "./BuyYourTerrazas";
-import { VideoSection } from "./VideoSection";
-import { WinesCarouselSection } from "./WinesCarouselSection";
 
 const Home: React.FC = () => {
   return (
@@ -31,6 +34,8 @@ const Home: React.FC = () => {
         <VideoSection />
         <WinesCarouselSection />
       </StripeBG>
+
+      <Footer />
     </Container>
   );
 };
