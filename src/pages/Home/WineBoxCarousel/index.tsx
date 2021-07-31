@@ -60,6 +60,7 @@ const WineBoxCarousel: React.FC = () => {
           showIndicators={false}
           autoPlay={false}
           showStatus={false}
+          showThumbs={false}
         >
           <CarouselItemWrapper>
             <WineBoxImage src={WineBoxOpened} alt="Wine Box opened" />

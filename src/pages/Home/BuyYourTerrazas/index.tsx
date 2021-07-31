@@ -16,6 +16,7 @@ const BuyYourTerrazas: React.FC = () => {
         showIndicators={false}
         showStatus={false}
         interval={5000000}
+        showThumbs={false}
       >
         {shops.map((shop) => (
           <StyledShopCard key={shop.name} data={shop} />

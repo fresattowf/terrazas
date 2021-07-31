@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ContentContainer from "../../components/ContentContainer";
 
 import HeaderBGMobile from "../../images/header-bg-mobile.png";
-import BGStripes from "../../images/bg-stripes.png";
+import BGStripes from "../../images/bg-stripes-2.png";
 
 export const Container = styled.div`
   background-image: url(${HeaderBGMobile});
@@ -45,6 +45,5 @@ export const WineBoxImage = styled.img`
 
 export const StripeBG = styled.div`
   background: url(${BGStripes});
-  /* background-size: cover; */
-  background-repeat: no-repeat;
+  background-position: top center;
 `;
