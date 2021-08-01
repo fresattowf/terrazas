@@ -1,9 +1,9 @@
 import React from "react";
 import PlayerImage from "../../../images/player.png";
-import ContentContainer from "../../../components/ContentContainer";
 
 import {
   Container,
+  StyledContentContainer,
   VideoWrapper,
   TerrazasLogo,
   Paragraph,
@@ -13,7 +13,7 @@ import {
 const VideoSection: React.FC = () => {
   return (
     <Container>
-      <ContentContainer>
+      <StyledContentContainer>
         <VideoWrapper href="http://youtube.com.br" target="_blank">
           <img src={PlayerImage} alt="Player" />
 
@@ -44,7 +44,7 @@ const VideoSection: React.FC = () => {
           panorâmica de todos os nossos terroirs de altura em Mendoza. É a
           expressão consistente de cada variedade colhida trás colhida.
         </Paragraph>
-      </ContentContainer>
+      </StyledContentContainer>
     </Container>
   );
 };

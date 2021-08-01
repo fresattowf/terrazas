@@ -1,10 +1,22 @@
 import styled from "styled-components";
+import ContentContainer from "../../../components/ContentContainer";
 import BGVideo from "../../../images/bg-video.png";
 
 import TerrazasImage from "../../../images/terrazas.png";
 
 export const Container = styled.div`
   padding: 30px 0;
+
+  @media (min-width: 768px) {
+    padding: 90px 0 30px;
+  }
+`;
+
+export const StyledContentContainer = styled(ContentContainer)`
+  @media (min-width: 768px) {
+    width: 1479px;
+    margin: 0 auto;
+  }
 `;
 
 export const VideoWrapper = styled.a`
@@ -48,6 +60,33 @@ export const VideoWrapper = styled.a`
     text-align: center;
     color: #fff;
     margin-top: 36px;
+  }
+
+  @media (min-width: 768px) {
+    height: 555px;
+    background-position: center top;
+    background-size: cover;
+
+    padding-top: 250px;
+
+    img {
+      width: 70px;
+      height: 70px;
+    }
+
+    strong {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 30px;
+
+      max-width: 854px;
+      width: 100%;
+
+      margin: 100px auto 0;
+    }
   }
 `;
 
