@@ -22,10 +22,12 @@ const Home: React.FC = () => {
     <Container>
       <Header>
         <StyledContentContainer>
-          <TerrazasImage src={Logo} alt="Terrazas by wessel" />
+          <div>
+            <TerrazasImage src={Logo} alt="Terrazas by wessel" />
 
-          <h1>O melhor presente é um brinde especial.</h1>
-          <h2>Neste dia dos Pais surpreenda com Terrazas de los Andes.</h2>
+            <h1>O melhor presente é um brinde especial.</h1>
+            <h2>Neste dia dos Pais surpreenda com Terrazas de los Andes.</h2>
+          </div>
         </StyledContentContainer>
       </Header>
 
