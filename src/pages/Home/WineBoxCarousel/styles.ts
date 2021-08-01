@@ -21,6 +21,7 @@ interface WineBoxImageInterface {
 
 export const WineBoxImage = styled.img<WineBoxImageInterface>`
   display: block;
+  max-width: 300px;
   width: 100%;
 
   ${(props) =>

@@ -6,10 +6,10 @@ import BGStripes from "../../images/bg-stripes-2.png";
 
 export const Container = styled.div`
   background-image: url(${HeaderBGMobile});
-  background-size: contain;
-  background-position: 0 -142px;
+  background-size: 110%;
   background-repeat: no-repeat;
-  padding-top: 60px;
+  background-position: top;
+  padding-top: 226px;
 `;
 
 export const StyledContentContainer = styled(ContentContainer)`
@@ -36,6 +36,8 @@ export const StyledContentContainer = styled(ContentContainer)`
 export const TerrazasImage = styled.img`
   display: block;
   margin: 0 auto 16px;
+
+  width: 193px;
 `;
 
 export const WineBoxImage = styled.img`

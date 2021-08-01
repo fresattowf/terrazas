@@ -33,7 +33,7 @@ export const Footer = styled.footer`
   align-items: center;
   justify-content: center;
 
-  margin: 40px 0 0;
+  margin: 16px 0 0;
 
   > div {
     height: 22px;

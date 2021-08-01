@@ -20,6 +20,10 @@ export const Container = styled.div`
     p {
       /* Remove after lkogo */
       margin-bottom: 20px;
+
+      font-style: italic;
+      font-size: 12px;
+      font-weight: 100;
     }
   }
 `;
