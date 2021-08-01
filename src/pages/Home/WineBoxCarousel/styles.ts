@@ -9,13 +9,24 @@ export const Container = styled.div`
   background-size: cover;
 
   padding-bottom: 45px;
+
+  .carousel .thumbs-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .carousel .thumb.selected,
+  .carousel .thumb:hover {
+    border: 3px solid var(--wine);
+    cursor: pointer;
+  }
 `;
 
 export const StyledContentContainer = styled(ContentContainer)`
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-    padding: 70px 30px;
+    padding: 70px 15px;
 
     > div {
       width: 100%;

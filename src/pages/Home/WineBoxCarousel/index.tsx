@@ -76,6 +76,25 @@ const WineBoxCarousel: React.FC = () => {
           </CarouselItemWrapper>
         </MobileCarousel>
 
+        <DesktopCarousel
+          showArrows={false}
+          showIndicators={false}
+          autoPlay={false}
+          showStatus={false}
+          interval={1000000000}
+        >
+          <img
+            src={WineBoxOpened}
+            alt="Wine Box opened"
+            className="wine-box-opened"
+          />
+          <img
+            src={WineBoxClosed}
+            alt="Wine Box closed"
+            className="wine-box-closed"
+          />
+        </DesktopCarousel>
+
         <div>
           <Title>Kit Experiência Terrazas by Wessel</Title>
 
