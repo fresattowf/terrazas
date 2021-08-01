@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Carousel } from "react-responsive-carousel";
+
 import ShopCard from "../../../components/ShopCard";
 
 export const Container = styled.div`
@@ -16,10 +18,22 @@ export const Container = styled.div`
 
     margin-bottom: 30px;
   }
+
+  @media (min-width: 768px) {
+    padding: 85px 0;
+  }
+`;
+
+export const MobileCarousel = styled(Carousel)`
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const StyledShopCard = styled(ShopCard)`
   margin: 0 auto;
+
+  width: calc(100% - 10px);
 `;
 
 export const Footer = styled.footer`
@@ -40,5 +54,9 @@ export const Footer = styled.footer`
     width: 1px;
     background-color: #fff;
     margin: 0 25px;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 52px;
   }
 `;

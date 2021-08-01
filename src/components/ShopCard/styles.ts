@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 180px;
+  /* width: 180px; */
   border-radius: 2px;
   background-color: #fff;
 
@@ -20,15 +20,60 @@ export const Container = styled.div`
     color: var(--wine);
     margin-top: 8px;
   }
+
+  @media (min-width: 768px) {
+    span,
+    strong {
+      text-align: center;
+    }
+  }
+`;
+
+export const LogoWrapper = styled.div`
+  @media (min-width: 768px) {
+    height: 64px;
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const LogoImage = styled.img`
   max-width: 80px;
   width: 100%;
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+
+    &.entre-vinhos {
+      max-width: 129px;
+    }
+
+    &.brava {
+      max-width: 136px;
+      height: 67px;
+    }
+
+    &.vinho-br {
+      max-width: 137px;
+      height: 67px;
+    }
+
+    &.bocatti {
+      max-width: 147px;
+    }
+
+    &.bebidas-do-sul {
+      max-width: 160px;
+    }
+  }
 `;
 
 export const WineImage = styled.img`
   margin: 5px 0;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Divider = styled.div`

@@ -1,6 +1,13 @@
 import React from "react";
 
-import { Container, LogoImage, Divider, WineImage, ShopButton } from "./styles";
+import {
+  Container,
+  LogoImage,
+  Divider,
+  WineImage,
+  ShopButton,
+  LogoWrapper,
+} from "./styles";
 
 interface ShopCardProps {
   data: {
@@ -16,7 +23,9 @@ const ShopCard: React.FC<ShopCardProps> = ({ data, ...rest }) => {
 
   return (
     <Container {...rest}>
-      <LogoImage src={shopImage} alt={name} />
+      <LogoWrapper>
+        <LogoImage src={shopImage} alt={name} />
+      </LogoWrapper>
 
       <Divider />
       <WineImage
