@@ -33,7 +33,9 @@ export const MobileCarousel = styled(Carousel)`
 export const StyledShopCard = styled(ShopCard)`
   margin: 0 auto;
 
-  width: calc(100% - 10px);
+  @media (min-width: 768px) {
+    width: calc(100% - 10px);
+  }
 `;
 
 export const Footer = styled.footer`

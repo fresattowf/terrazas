@@ -1,19 +1,9 @@
 import React from "react";
 import { shops } from "./carouselData";
 import { Container, MobileCarousel, StyledShopCard, Footer } from "./styles";
-
-import Slider from "react-slick";
-import ContentContainer from "../../../components/ContentContainer";
+import DesktopCarousel from "./DesktopCarousel";
 
 const BuyYourTerrazas: React.FC = () => {
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 6,
-  };
-
   return (
     <Container>
       <h1>
@@ -33,15 +23,7 @@ const BuyYourTerrazas: React.FC = () => {
         ))}
       </MobileCarousel>
 
-      <ContentContainer>
-        <Slider {...settings}>
-          {shops.map((shop) => (
-            <div>
-              <StyledShopCard key={shop.name} data={shop} />
-            </div>
-          ))}
-        </Slider>
-      </ContentContainer>
+      <DesktopCarousel />
 
       <Footer>
         Powered by
