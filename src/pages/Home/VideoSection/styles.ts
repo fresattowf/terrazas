@@ -95,6 +95,13 @@ export const TerrazasLogo = styled.img.attrs({ src: TerrazasImage })`
 
   display: block;
   margin: 40px auto 20px;
+
+  @media (min-width: 768px) {
+    width: 425px;
+
+    margin-top: 54px;
+    margin-bottom: 30px;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -105,6 +112,17 @@ export const Paragraph = styled.p`
   color: #404040;
 
   margin-bottom: 35px;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    max-width: 1083px;
+
+    font-size: 24px;
+    line-height: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const SubTitle = styled.h4`
@@ -115,4 +133,8 @@ export const SubTitle = styled.h4`
   color: #000;
 
   margin-bottom: 15px;
+
+  @media (min-width: 768px) {
+    font-size: 27px;
+  }
 `;
