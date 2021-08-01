@@ -25,6 +25,10 @@ export const Container = styled.div`
       font-size: 12px;
       font-weight: 100;
     }
+
+    img {
+      width: 168px;
+    }
   }
 
   @media (min-width: 768px) {
