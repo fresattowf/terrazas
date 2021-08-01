@@ -1,5 +1,4 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
 
 import WineBoxOpened from "../../../images/wine-box-opened.png";
 import WineBoxClosed from "../../../images/wine-box-closed.png";
@@ -10,6 +9,9 @@ import WesselImage from "../../../images/wessel.png";
 
 import {
   Container,
+  StyledContentContainer,
+  MobileCarousel,
+  DesktopCarousel,
   CarouselItemWrapper,
   WineBoxImage,
   Title,
@@ -18,7 +20,6 @@ import {
   WhereToBuyWrapper,
 } from "./styles";
 import { WhereToBuy } from "../../../components/WhereToBuy";
-import ContentContainer from "../../../components/ContentContainer";
 
 const placesToBuy = [
   {
@@ -54,8 +55,8 @@ const placesToBuy = [
 const WineBoxCarousel: React.FC = () => {
   return (
     <Container>
-      <ContentContainer>
-        <Carousel
+      <StyledContentContainer>
+        <MobileCarousel
           showArrows={false}
           showIndicators={false}
           autoPlay={false}
@@ -72,25 +73,27 @@ const WineBoxCarousel: React.FC = () => {
               wrongSizeImage
             />
           </CarouselItemWrapper>
-        </Carousel>
+        </MobileCarousel>
 
-        <Title>Kit Experiência Terrazas by Wessel</Title>
+        <div>
+          <Title>Kit Experiência Terrazas by Wessel</Title>
 
-        <SubTitle>Procure em nossos parceiros</SubTitle>
+          <SubTitle>Procure em nossos parceiros</SubTitle>
 
-        <Description>
-          Kit Experiência Terrazas de los Andes + Wessel para o Dia dos Pais
-          contendo 1 garrafa de Terrazas Reserva Cabernet Sauvignon 750 ml, 1
-          Saca-Rolhas Terrazas, 1 Avental para Churrasco e Mini-garras aperitivo
-          Terrazas by Wessel.
-        </Description>
+          <Description>
+            Kit Experiência Terrazas de los Andes + Wessel para o Dia dos Pais
+            contendo 1 garrafa de Terrazas Reserva Cabernet Sauvignon 750 ml, 1
+            Saca-Rolhas Terrazas, 1 Avental para Churrasco e Mini-garras
+            aperitivo Terrazas by Wessel.
+          </Description>
 
-        <WhereToBuyWrapper>
-          {placesToBuy.map((place) => (
-            <WhereToBuy key={place.placeName} placeData={place} />
-          ))}
-        </WhereToBuyWrapper>
-      </ContentContainer>
+          <WhereToBuyWrapper>
+            {placesToBuy.map((place) => (
+              <WhereToBuy key={place.placeName} placeData={place} />
+            ))}
+          </WhereToBuyWrapper>
+        </div>
+      </StyledContentContainer>
     </Container>
   );
 };

@@ -1,4 +1,7 @@
 import styled, { css } from "styled-components";
+import { Carousel } from "react-responsive-carousel";
+
+import ContentContainer from "../../../components/ContentContainer";
 import GrayBackground from "../../../images/bg-gray.png";
 
 export const Container = styled.div`
@@ -8,6 +11,31 @@ export const Container = styled.div`
   background-size: cover;
 
   padding-bottom: 45px;
+`;
+
+export const StyledContentContainer = styled(ContentContainer)`
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 30px;
+
+    > div {
+      width: 100%;
+      max-width: 477px;
+    }
+  }
+`;
+
+export const MobileCarousel = styled(Carousel)`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const DesktopCarousel = styled(Carousel)`
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const CarouselItemWrapper = styled.div`
