@@ -11,6 +11,7 @@ import Logo from "../../images/logo.png";
 
 import {
   Container,
+  Header,
   StyledContentContainer,
   TerrazasImage,
   StripeBG,
@@ -19,12 +20,14 @@ import {
 const Home: React.FC = () => {
   return (
     <Container>
-      <StyledContentContainer>
-        <TerrazasImage src={Logo} alt="Terrazas by wessel" />
+      <Header>
+        <StyledContentContainer>
+          <TerrazasImage src={Logo} alt="Terrazas by wessel" />
 
-        <h1>O melhor presente é um brinde especial.</h1>
-        <h2>Neste dia dos Pais surpreenda com Terrazas de los Andes.</h2>
-      </StyledContentContainer>
+          <h1>O melhor presente é um brinde especial.</h1>
+          <h2>Neste dia dos Pais surpreenda com Terrazas de los Andes.</h2>
+        </StyledContentContainer>
+      </Header>
 
       <WineBoxCarousel />
 

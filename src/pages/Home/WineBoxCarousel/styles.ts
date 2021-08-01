@@ -5,8 +5,6 @@ import ContentContainer from "../../../components/ContentContainer";
 import GrayBackground from "../../../images/bg-gray.png";
 
 export const Container = styled.div`
-  margin-top: 52px;
-
   background-image: url(${GrayBackground});
   background-size: cover;
 
@@ -27,6 +25,8 @@ export const StyledContentContainer = styled(ContentContainer)`
 `;
 
 export const MobileCarousel = styled(Carousel)`
+  transform: translateY(-35px);
+
   @media (min-width: 768px) {
     display: none;
   }

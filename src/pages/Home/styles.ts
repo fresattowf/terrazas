@@ -4,15 +4,20 @@ import ContentContainer from "../../components/ContentContainer";
 import HeaderBGMobile from "../../images/header-bg-mobile.png";
 import BGStripes from "../../images/bg-stripes-2.png";
 
-export const Container = styled.div`
+export const Container = styled.div``;
+
+export const Header = styled.header`
+  height: 600px;
+
   background-image: url(${HeaderBGMobile});
-  background-size: 110%;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
-  padding-top: 226px;
 `;
 
 export const StyledContentContainer = styled(ContentContainer)`
+  padding-top: 200px;
+
   > h1,
   > h2 {
     font-family: "Merriweather", serif;
