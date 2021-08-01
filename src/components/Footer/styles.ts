@@ -26,4 +26,10 @@ export const Container = styled.div`
       font-weight: 100;
     }
   }
+
+  @media (min-width: 768px) {
+    > div p {
+      font-size: 15px;
+    }
+  }
 `;

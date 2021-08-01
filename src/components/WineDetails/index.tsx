@@ -11,6 +11,7 @@ import ServeWineImage from "../../images/serve-wine.svg";
 import BarrelImage from "../../images/barrel.svg";
 
 import { Container, Left, Right, SpecificationWrapper } from "./styles";
+import { BottleImageWithBackground } from "../BottleImageWithBackground";
 
 interface Data {
   description: string | null;
@@ -45,18 +46,22 @@ const WineDetails: React.FC<WineDetailsProps> = ({ data }) => {
   } = data;
   return (
     <Container>
-      {description && owner && (
-        <Left>
-          <img src={image} alt={name} />
+      <Left>
+        <BottleImageWithBackground
+          src={image}
+          owner={owner ? owner : "gonzalo"}
+        />
 
-          <p>{description}</p>
+        {description && <p>{description}</p>}
 
+        {owner && (
           <img
             src={owner === "gonzalo" ? GonzaloImage : NudasImage}
             alt={owner === "gonzalo" ? "Gonzalo" : "Nudas"}
+            className="owner"
           />
-        </Left>
-      )}
+        )}
+      </Left>
 
       <Right>
         <span>Reserva</span>

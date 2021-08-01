@@ -31,6 +31,10 @@ export const Left = styled.div`
     width: 72px;
   }
 
+  img:not(.owner) {
+    display: none;
+  }
+
   @media (min-width: 768px) {
     width: 50%;
     margin-right: 21px;
@@ -38,6 +42,10 @@ export const Left = styled.div`
     p {
       font-size: 16px;
       margin-top: 20px;
+    }
+
+    img:not(.owner) {
+      display: block;
     }
 
     img {
