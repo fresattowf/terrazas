@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import BG from "../../images/onboarding-bg.jpg";
 
 export const Container = styled.div`
@@ -51,7 +52,7 @@ export const InputWrapper = styled.div`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
   font-family: "Weiss-Regular", serif;
   padding: 10px 0;
   cursor: pointer;
