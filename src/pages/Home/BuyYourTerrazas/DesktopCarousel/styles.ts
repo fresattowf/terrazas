@@ -3,7 +3,13 @@ import LeftSvg from "../../../../images/left-arrow.svg";
 import RightSvg from "../../../../images/right-arrow.svg";
 import ShopCard from "../../../../components/ShopCard";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;
 
 export const StyledShopCard = styled(ShopCard)`
   margin: 0 auto;

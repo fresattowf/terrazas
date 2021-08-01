@@ -3,6 +3,7 @@ import Slider from "react-slick";
 
 import ContentContainer from "../../../../components/ContentContainer";
 import {
+  Container,
   StyledShopCard,
   CarouselWrapper,
   LeftArrow,
@@ -32,20 +33,22 @@ const DesktopCarousel: React.FC = () => {
   }
 
   return (
-    <ContentContainer>
-      <CarouselWrapper>
-        <LeftArrow onClick={handlePrev} />
+    <Container>
+      <ContentContainer>
+        <CarouselWrapper>
+          <LeftArrow onClick={handlePrev} />
 
-        <Slider {...settings} ref={carouselRef}>
-          {shops.map((shop) => (
-            <div key={shop.name}>
-              <StyledShopCard data={shop} />
-            </div>
-          ))}
-        </Slider>
-        <RightArrow onClick={handleNext} />
-      </CarouselWrapper>
-    </ContentContainer>
+          <Slider {...settings} ref={carouselRef}>
+            {shops.map((shop) => (
+              <div key={shop.name}>
+                <StyledShopCard data={shop} />
+              </div>
+            ))}
+          </Slider>
+          <RightArrow onClick={handleNext} />
+        </CarouselWrapper>
+      </ContentContainer>
+    </Container>
   );
 };
 
