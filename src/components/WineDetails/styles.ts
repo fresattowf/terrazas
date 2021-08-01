@@ -6,6 +6,11 @@ export const Container = styled.div`
   padding: 22px 16px;
   box-shadow: 0 0 21px #00000029;
   background-color: #fff;
+
+  @media (min-width: 768px) {
+    background: transparent;
+    box-shadow: unset;
+  }
 `;
 
 export const Left = styled.div`
@@ -24,6 +29,20 @@ export const Left = styled.div`
 
   img {
     width: 72px;
+  }
+
+  @media (min-width: 768px) {
+    width: 50%;
+    margin-right: 21px;
+
+    p {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    img {
+      width: 125px;
+    }
   }
 `;
 
@@ -50,6 +69,20 @@ export const Right = styled.div`
     font-weight: 500;
 
     margin-bottom: 16px;
+  }
+
+  @media (min-width: 768px) {
+    width: 50%;
+
+    > span {
+      font-size: 24px;
+    }
+
+    > strong {
+      font-size: 49px;
+      margin-top: 10px;
+      height: 130px;
+    }
   }
 `;
 

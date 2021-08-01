@@ -6,10 +6,13 @@ import { WineDetails } from "../../../components/WineDetails";
 import WineColorBackground from "../../../images/wine-texture.jpg";
 import YellowColorBackground from "../../../images/yellow-texture.jpg";
 
+import { WineGrid } from "./WineGrid";
 import { wines } from "./winesData";
 
 import {
   Container,
+  Mobile,
+  Desktop,
   BottleWrapper,
   BottleImage,
   BottleBackground,
@@ -20,39 +23,45 @@ const WinesCarouselSection: React.FC = () => {
 
   return (
     <Container>
-      <Carousel
-        showIndicators={false}
-        autoPlay={false}
-        showArrows={false}
-        showStatus={false}
-        interval={10000000000}
-        showThumbs={false}
-        onChange={(index) => {
-          setCurrentWineIndex(index);
-        }}
-      >
-        {wines.map((wine) => {
-          const shouldHaveAnYellowBg = wine.owner === "gonzalo";
+      <Mobile>
+        <Carousel
+          showIndicators={false}
+          autoPlay={false}
+          showArrows={false}
+          showStatus={false}
+          interval={10000000000}
+          showThumbs={false}
+          onChange={(index) => {
+            setCurrentWineIndex(index);
+          }}
+        >
+          {wines.map((wine) => {
+            const shouldHaveAnYellowBg = wine.owner === "gonzalo";
 
-          return (
-            <BottleWrapper key={wine.name}>
-              <BottleImage src={wine.image} alt={wine.name} />
+            return (
+              <BottleWrapper key={wine.name}>
+                <BottleImage src={wine.image} alt={wine.name} />
 
-              <BottleBackground
-                src={
-                  shouldHaveAnYellowBg
-                    ? YellowColorBackground
-                    : WineColorBackground
-                }
-              />
-            </BottleWrapper>
-          );
-        })}
-      </Carousel>
+                <BottleBackground
+                  src={
+                    shouldHaveAnYellowBg
+                      ? YellowColorBackground
+                      : WineColorBackground
+                  }
+                />
+              </BottleWrapper>
+            );
+          })}
+        </Carousel>
 
-      <ContentContainer>
-        <WineDetails data={wines[currentWineIndex]} />
-      </ContentContainer>
+        <ContentContainer>
+          <WineDetails data={wines[currentWineIndex]} />
+        </ContentContainer>
+      </Mobile>
+
+      <Desktop>
+        <WineGrid />
+      </Desktop>
     </Container>
   );
 };

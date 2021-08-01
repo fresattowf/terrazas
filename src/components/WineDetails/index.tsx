@@ -23,6 +23,7 @@ interface Data {
   color: string;
   harmony: string;
   service: string;
+  image: string;
 }
 interface WineDetailsProps {
   data: Data;
@@ -40,11 +41,14 @@ const WineDetails: React.FC<WineDetailsProps> = ({ data }) => {
     color,
     harmony,
     service,
+    image,
   } = data;
   return (
     <Container>
       {description && owner && (
         <Left>
+          <img src={image} alt={name} />
+
           <p>{description}</p>
 
           <img

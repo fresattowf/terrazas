@@ -2,6 +2,20 @@ import styled from "styled-components";
 
 export const Container = styled.div``;
 
+export const Mobile = styled.div`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const Desktop = styled.div`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;
+
 export const BottleWrapper = styled.div`
   position: relative;
 
