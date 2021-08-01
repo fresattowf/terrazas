@@ -6,8 +6,8 @@ export function Routes() {
   return (
     <Router basename="/">
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/onboarding" component={Onboarding} />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/" component={Onboarding} />
       </Switch>
     </Router>
   );

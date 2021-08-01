@@ -91,7 +91,7 @@ const Onboarding: React.FC = () => {
         />
       </InputWrapper>
 
-      <Button to="/">Entrar</Button>
+      <Button to="/home">Entrar</Button>
 
       <Footer>
         <p>
