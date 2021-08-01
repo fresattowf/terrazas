@@ -14,8 +14,9 @@ export const Container = styled.div`
 
 export const StyledContentContainer = styled(ContentContainer)`
   @media (min-width: 768px) {
-    width: 1479px;
-    margin: 0 auto;
+    max-width: 1479px;
+    margin: 0px auto;
+    width: 100%;
   }
 `;
 
