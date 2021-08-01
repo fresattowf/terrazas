@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import bgStipes from "../images/bg-stripes-2.png";
 
 export default createGlobalStyle`
   :root {
@@ -33,7 +34,8 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  html, body {
+  html, body, #root {
+    height: 100%;
     overflow-x: hidden;
   }
 
