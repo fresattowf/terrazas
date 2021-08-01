@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import a from "../../images/bg-stripes-2.png";
+import BG from "../../images/onboarding-bg.jpg";
 
 export const Container = styled.div`
   padding: 30px 20px;
 
-  background-image: url(${a});
+  background-image: url(${BG});
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   height: 100%;
 

@@ -1,7 +1,12 @@
 import React from "react";
+import Select from "react-select";
+
 import TerrazasLogo from "../../images/terrazas.png";
 
 import { Container, InputWrapper, Button, Footer } from "./styles";
+
+import { years } from "./years";
+import { countries } from "./countries";
 
 const Onboarding: React.FC = () => {
   return (
@@ -22,21 +27,68 @@ const Onboarding: React.FC = () => {
       <InputWrapper>
         <span>Selecione seu país / região</span>
 
-        <select name="country" id="country">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
+        <Select
+          options={countries}
+          isSearchable={false}
+          placeholder="PAÍS / REGIÃO"
+          styles={{
+            control: (base) => ({
+              ...base,
+              borderRadius: 0,
+              height: 50,
+              borderColor: "#000",
+              boxShadow: "none",
+              outline: 0,
+              backgroundColor: "transparent",
+            }),
+            indicatorSeparator: () => ({ display: "none" }),
+            placeholder: () => ({
+              color: "#000",
+              margin: "0 auto",
+              fontFamily: '"Interstate-Light-Compressed", sans-serif',
+              transform: "translateX(25px)",
+            }),
+            menu: () => ({
+              margin: 0,
+              border: "1px solid #000",
+              borderTop: 0,
+              backgroundColor: "#fff",
+            }),
+          }}
+        />
       </InputWrapper>
 
       <InputWrapper>
         <span>Qual é o seu ano de nascimento?</span>
 
-        <select name="country" id="country">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
+        <Select
+          options={years}
+          isSearchable={false}
+          placeholder="ANO"
+          styles={{
+            control: (base) => ({
+              ...base,
+              borderRadius: 0,
+              height: 50,
+              borderColor: "#000",
+              boxShadow: "none",
+              outline: 0,
+            }),
+            indicatorSeparator: () => ({ display: "none" }),
+            placeholder: () => ({
+              color: "#000",
+              margin: "0 auto",
+              fontFamily: '"Interstate-Light-Compressed", sans-serif',
+              transform: "translateX(25px)",
+            }),
+            menu: () => ({
+              margin: 0,
+              border: "1px solid #000",
+              borderTop: 0,
+              backgroundColor: "#fff",
+            }),
+          }}
+        />
       </InputWrapper>
 
       <Button>Entrar</Button>
