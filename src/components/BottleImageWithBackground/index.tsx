@@ -3,8 +3,8 @@ import React from "react";
 import BottomDistorted from "../../images/bottom-distorted.png";
 import BottomDistorted2 from "../../images/bottom-distorted-2.png";
 
-import WineTexture from "../../images/wine-texture.jpg";
-import YellowTexture from "../../images/yellow-texture.jpg";
+import WineTexture from "../../images/wine-texture.png";
+import YellowTexture from "../../images/yellow-texture.png";
 
 import {
   Container,

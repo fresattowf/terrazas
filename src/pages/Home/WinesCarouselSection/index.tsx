@@ -3,8 +3,8 @@ import { Carousel } from "react-responsive-carousel";
 import ContentContainer from "../../../components/ContentContainer";
 import { WineDetails } from "../../../components/WineDetails";
 
-import WineColorBackground from "../../../images/wine-texture.jpg";
-import YellowColorBackground from "../../../images/yellow-texture.jpg";
+import WineColorBackground from "../../../images/wine-texture.png";
+import YellowColorBackground from "../../../images/yellow-texture.png";
 
 import { WineGrid } from "./WineGrid";
 import { wines } from "./winesData";

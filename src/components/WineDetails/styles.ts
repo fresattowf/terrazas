@@ -40,7 +40,7 @@ export const Left = styled.div`
     margin-right: 21px;
 
     p {
-      font-size: 16px;
+      font-size: 13px;
       margin-top: 20px;
     }
 
@@ -54,13 +54,9 @@ export const Left = styled.div`
   }
 `;
 
-export const Right = styled.div`
-  flex: 1;
-
+export const BottleNameWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
-  width: 60%;
 
   > span {
     font-family: "Roboto", sans-serif;
@@ -80,17 +76,32 @@ export const Right = styled.div`
   }
 
   @media (min-width: 768px) {
-    width: 50%;
+    height: 135px;
+    justify-content: center;
 
     > span {
       font-size: 24px;
     }
 
     > strong {
-      font-size: 49px;
-      margin-top: 10px;
+      font-size: 40px;
+      margin-top: 5px;
       height: 130px;
     }
+  }
+`;
+
+export const Right = styled.div`
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    margin-top: 170px;
   }
 `;
 

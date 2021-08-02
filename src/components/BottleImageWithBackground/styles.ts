@@ -10,6 +10,12 @@ export const Container = styled.div`
     z-index: 1005;
     margin-bottom: 30px;
   }
+
+  @media (min-width: 768px) {
+    > img {
+      width: 125px !important;
+    }
+  }
 `;
 
 export const BackgroundWrapper = styled.div`
@@ -23,6 +29,11 @@ export const BackgroundWrapper = styled.div`
 
   width: 135px;
   height: 200px;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 240px;
+  }
 `;
 
 export const BackgroundImage = styled.img`

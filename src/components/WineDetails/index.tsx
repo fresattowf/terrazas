@@ -10,7 +10,13 @@ import ServeFoodImage from "../../images/serve-food.svg";
 import ServeWineImage from "../../images/serve-wine.svg";
 import BarrelImage from "../../images/barrel.svg";
 
-import { Container, Left, Right, SpecificationWrapper } from "./styles";
+import {
+  Container,
+  Left,
+  Right,
+  BottleNameWrapper,
+  SpecificationWrapper,
+} from "./styles";
 import { BottleImageWithBackground } from "../BottleImageWithBackground";
 
 interface Data {
@@ -64,8 +70,10 @@ const WineDetails: React.FC<WineDetailsProps> = ({ data }) => {
       </Left>
 
       <Right>
-        <span>Reserva</span>
-        <strong>{name}</strong>
+        <BottleNameWrapper>
+          <span>Reserva</span>
+          <strong>{name}</strong>
+        </BottleNameWrapper>
 
         <SpecificationWrapper>
           <img src={LocationImage} alt="Amadurecimento" />
