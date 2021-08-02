@@ -31,6 +31,7 @@ interface Data {
   harmony: string;
   service: string;
   image: string;
+  bgColor: string;
 }
 interface WineDetailsProps {
   data: Data;
@@ -49,14 +50,12 @@ const WineDetails: React.FC<WineDetailsProps> = ({ data }) => {
     harmony,
     service,
     image,
+    bgColor,
   } = data;
   return (
     <Container>
       <Left>
-        <BottleImageWithBackground
-          src={image}
-          owner={owner ? owner : "gonzalo"}
-        />
+        <BottleImageWithBackground src={image} bgColor={bgColor} />
 
         {description && <p>{description}</p>}
 

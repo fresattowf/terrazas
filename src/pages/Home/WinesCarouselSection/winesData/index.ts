@@ -21,6 +21,7 @@ export const wines = [
       "Este Malbec combina com carnes de porco, legumes cozidos e risotos de cogumelo.",
     service: "Servir entre 16° e 18°C. Em taça de vinho tinto.",
     image: MalbecImage,
+    bgColor: "wine",
   },
   {
     description:
@@ -39,6 +40,7 @@ export const wines = [
       "Combinação perfeita com carne de caça (veado, javali, coelho), cordeiro e outras carnes vermelhas grelhadas. Também combina bem com legumes assados na brasa, ensopados e pratos com molho demi-glace.",
     service: "Servir entre 16° e 18°C. Em taça de vinho tinto.",
     image: CabernetImage,
+    bgColor: "wine",
   },
   {
     description: null,
@@ -55,6 +57,7 @@ export const wines = [
       "Acompanha bem pratos de carne vermelha e caça, peru e porco. É um bom companheiro para massas, comidas apimentadas e embutidos.",
     service: "Servir entre 16° e 18°C. Em taça de vinho tinto.",
     image: SyrahImage,
+    bgColor: "wine",
   },
   {
     description:
@@ -72,6 +75,7 @@ export const wines = [
       "Com manteiga ou creme de leite, carnes brancas ou pratos à base de frutas cítricas.",
     service: "Servir entre 08° e 11°C. Em taça de vinho branco.",
     image: ChardonnayImage,
+    bgColor: "yellow",
   },
   {
     description:
@@ -89,5 +93,6 @@ export const wines = [
       "Ideal para acompanhar entradas frescas, quejo Emmental, frutos do mar e peixes grelhados.",
     service: "Servir entre 08° e 12°C. Em taça de vinho branco.",
     image: TorrontesImage,
+    bgColor: "yellow",
   },
 ];

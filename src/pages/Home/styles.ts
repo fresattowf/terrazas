@@ -3,7 +3,7 @@ import ContentContainer from "../../components/ContentContainer";
 
 import HeaderBGMobile from "../../images/header-bg-mobile.png";
 import HeaderBG from "../../images/header-bg.png";
-import BGStripes from "../../images/bg-stripes-2.png";
+import BGStripes from "../../images/big-bg-stripes.png";
 
 export const Container = styled.div``;
 
@@ -89,6 +89,7 @@ export const WineBoxImage = styled.img`
 export const StripeBG = styled.div`
   background: url(${BGStripes});
   background-position: top center;
+  background-size: cover;
 
   padding-bottom: 55px;
 `;

@@ -15,14 +15,14 @@ import {
 
 interface BottleImageWithBackgroundProps {
   src: string;
-  owner: string;
+  bgColor: string;
 }
 
 const BottleImageWithBackground: React.FC<BottleImageWithBackgroundProps> = ({
   src,
-  owner,
+  bgColor,
 }) => {
-  const backgroundSrc = owner === "gonzalo" ? YellowTexture : WineTexture;
+  const backgroundSrc = bgColor === "wine" ? WineTexture : YellowTexture;
 
   return (
     <Container>
