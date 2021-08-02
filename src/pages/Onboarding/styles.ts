@@ -12,7 +12,27 @@ export const Container = styled.div`
 
   height: 100%;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 320px) {
+    height: unset;
+  }
+`;
+
+export const Content = styled.div`
   font-family: "Weiss-Regular", serif;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 580px;
+    width: 100%;
+  }
 
   > img {
     display: block;
@@ -41,6 +61,11 @@ export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (min-width: 768px) {
+    max-width: 300px;
+    width: 100%;
+  }
+
   margin-bottom: 16px;
 
   font-family: "Weiss-Regular", serif;
@@ -52,7 +77,7 @@ export const InputWrapper = styled.div`
   }
 `;
 
-export const Button = styled(Link)`
+export const Button = styled.button`
   font-family: "Weiss-Regular", serif;
   padding: 10px 0;
   cursor: pointer;
@@ -65,6 +90,7 @@ export const Button = styled(Link)`
 
   font-size: 1.125em;
   line-height: 1.5em;
+  text-decoration: none;
   text-align: center;
 
   border: 1px solid #c89500;
@@ -110,6 +136,10 @@ export const Footer = styled.footer`
       line-height: 1.6em;
       color: #c89500;
       text-decoration: none;
+
+      &:first-child {
+        margin-right: 30px;
+      }
     }
   }
 `;
