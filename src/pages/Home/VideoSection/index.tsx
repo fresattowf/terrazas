@@ -14,7 +14,7 @@ const VideoSection: React.FC = () => {
   return (
     <Container>
       <StyledContentContainer>
-        <VideoWrapper href="http://youtube.com.br" target="_blank">
+        <VideoWrapper href="https://youtu.be/x_lgQknWl5s" target="_blank">
           <img src={PlayerImage} alt="Player" />
 
           <strong>Assista o vídeo</strong>

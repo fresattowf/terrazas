@@ -72,6 +72,20 @@ export const DesktopCarousel = styled(Carousel)`
     margin-top: -16px;
   }
 
+  @media (max-width: 1500px) {
+    top: -85px;
+    left: -50px;
+    width: 621px;
+  }
+
+  @media (max-width: 1292px) {
+    position: relative;
+    width: 80%;
+  }
+
+  @media (max-width: 1200px) {
+  }
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -140,6 +154,7 @@ export const Description = styled.p`
 
   @media (min-width: 768px) {
     order: 2;
+    padding-left: 25px;
   }
 `;
 

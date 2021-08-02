@@ -103,10 +103,16 @@ const WineBoxCarousel: React.FC = () => {
           <SubTitle>Procure em nossos parceiros</SubTitle>
 
           <Description>
-            Kit Experiência Terrazas de los Andes + Wessel para o Dia dos Pais
+            {/* Kit Experiência Terrazas de los Andes + Wessel para o Dia dos Pais
             contendo 1 garrafa de Terrazas Reserva Cabernet Sauvignon 750 ml, 1
             Saca-Rolhas Terrazas, 1 Avental para Churrasco e Mini-garras
-            aperitivo Terrazas by Wessel.
+            aperitivo Terrazas by Wessel. */}
+            <ul>
+              <li>1 Garrafa de Terrazas Reserva Cabernet Sauvignon 750ml</li>
+              <li>1 Saca Rolhas Terrazas</li>
+              <li>1 Avental para Churrasco Exclusivo Terrazas + Wessel</li>
+              <li>1 Mini Garras Aperitivo Terrazas + Wessel</li>
+            </ul>
           </Description>
 
           <WhereToBuyWrapper>
