@@ -26,14 +26,15 @@ const placesToBuy = [
     placeName: "rappi",
     price: 319,
     available: true,
-    shopLink: "http://www.google.com",
+    shopLink: "https://rappi.app.link/QatSH2rWoib",
     image: RappiImage,
   },
   {
     placeName: "ifood",
     price: 319,
     available: true,
-    shopLink: "http://www.google.com",
+    shopLink:
+      "https://www.ifood.com.br/delivery/sao-paulo-sp/chandon---loja-oficial-vila-madalena/d7b0386d-b6d2-4b27-b5b2-29da90ff2aea?item=9fdd53da-7ca9-4a81-aaa8-4b50879e46e4",
     image: IFoodImage,
   },
   {
@@ -47,7 +48,8 @@ const placesToBuy = [
     placeName: "wessel",
     price: 319,
     available: true,
-    shopLink: "http://www.google.com",
+    shopLink:
+      "https://wessel.com.br/collections/churrasco/products/kit-experiencia-terrazas-de-los-andes-wessel",
     image: WesselImage,
   },
 ];
