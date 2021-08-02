@@ -4,6 +4,7 @@ import Onboarding from "./pages/Onboarding";
 
 export function Routes() {
   return (
+    // <Router basename="/nome-da-pasta">
     <Router basename="/">
       <Switch>
         <Route exact path="/home" component={Home} />
