@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import ContentContainer from "../../../components/ContentContainer";
 import BGVideo from "../../../images/bg-video.png";
 
@@ -105,7 +105,12 @@ export const TerrazasLogo = styled.img.attrs({ src: TerrazasImage })`
   }
 `;
 
-export const Paragraph = styled.p`
+interface ParagraphProps {
+  desktopOnly?: boolean;
+  mobileOnly?: boolean;
+}
+
+export const Paragraph = styled.p<ParagraphProps>`
   font-family: "Merriweather";
   font-size: 14px;
   font-weight: bold;
@@ -118,12 +123,28 @@ export const Paragraph = styled.p`
     width: 100%;
     max-width: 1083px;
 
-    font-size: 24px;
+    font-size: 21px;
     line-height: 30px;
 
     margin-left: auto;
     margin-right: auto;
   }
+
+  ${(props) =>
+    props.desktopOnly &&
+    css`
+      @media (max-width: 768px) {
+        display: none !important;
+      }
+    `}
+
+  ${(props) =>
+    props.mobileOnly &&
+    css`
+      @media (min-width: 768px) {
+        display: none !important;
+      }
+    `}
 `;
 
 export const SubTitle = styled.h4`
@@ -136,6 +157,6 @@ export const SubTitle = styled.h4`
   margin-bottom: 15px;
 
   @media (min-width: 768px) {
-    font-size: 27px;
+    font-size: 24px;
   }
 `;
