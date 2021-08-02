@@ -16,6 +16,15 @@ export const Container = styled.div`
   img {
     width: 64px;
   }
+
+  @media (min-width: 768px) {
+    height: 80px;
+    margin-bottom: 16px;
+
+    img {
+      width: 88px;
+    }
+  }
 `;
 
 export const Divider = styled.div`
@@ -53,6 +62,18 @@ export const Wrapper = styled.div`
       margin-top: 2px;
     }
   }
+
+  @media (min-width: 768px) {
+    > div {
+      strong {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 12px;
+      }
+    }
+  }
 `;
 
 export const ShopButton = styled.a`
@@ -67,4 +88,9 @@ export const ShopButton = styled.a`
   text-decoration: none;
 
   border-radius: 2px;
+
+  @media (min-width: 768px) {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
 `;

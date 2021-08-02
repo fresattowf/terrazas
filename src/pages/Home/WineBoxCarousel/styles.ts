@@ -15,22 +15,41 @@ export const Container = styled.div`
     justify-content: center !important;
   }
 
+  .carousel .thumb {
+    background-color: #fff;
+    height: 80px;
+    width: 80px !important;
+    padding: 7px;
+
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+  }
+
   .carousel .thumb.selected,
   .carousel .thumb:hover {
     border: 3px solid var(--wine);
     cursor: pointer;
   }
+
+  @media (min-width: 768px) {
+    height: 814px;
+  }
 `;
 
 export const StyledContentContainer = styled(ContentContainer)`
+  position: relative;
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
     padding: 70px 15px;
 
-    > div {
+    .experience-by-wessel-texts {
+      display: flex;
+      flex-direction: column;
+
       width: 100%;
-      max-width: 477px;
+      max-width: 476px;
+      margin-left: auto;
     }
   }
 `;
@@ -44,6 +63,15 @@ export const MobileCarousel = styled(Carousel)`
 `;
 
 export const DesktopCarousel = styled(Carousel)`
+  position: absolute;
+  top: -110px;
+  left: -160px;
+  width: 821px;
+
+  .thumbs-wrapper.axis-vertical {
+    margin-top: -16px;
+  }
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -77,6 +105,10 @@ export const Title = styled.h3`
   line-height: 48px;
   color: #000;
   margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    order: 1;
+  }
 `;
 
 export const SubTitle = styled.p`
@@ -88,6 +120,14 @@ export const SubTitle = styled.p`
   color: #000;
 
   margin-bottom: 14px;
+
+  @media (min-width: 768px) {
+    order: 3;
+
+    font-size: 27px;
+    margin-bottom: 22px;
+    margin-top: 32px;
+  }
 `;
 
 export const Description = styled.p`
@@ -97,8 +137,17 @@ export const Description = styled.p`
   line-height: 21px;
   font-weight: 400;
   color: var(--gold);
+
+  @media (min-width: 768px) {
+    order: 2;
+  }
 `;
 
 export const WhereToBuyWrapper = styled.div`
   margin-top: 32px;
+
+  @media (min-width: 768px) {
+    order: 4;
+    margin-top: 0;
+  }
 `;

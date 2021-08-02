@@ -95,8 +95,8 @@ const WineBoxCarousel: React.FC = () => {
           />
         </DesktopCarousel>
 
-        <div>
-          <Title>Kit Experiência Terrazas by Wessel</Title>
+        <div className="experience-by-wessel-texts">
+          <Title>Kit Experiência Terrazas + Wessel</Title>
 
           <SubTitle>Procure em nossos parceiros</SubTitle>
 
