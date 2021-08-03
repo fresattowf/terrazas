@@ -42,7 +42,7 @@ const placesToBuy = [
     placeName: "iguatemi",
     price: 319,
     available: true,
-    shopLink: "http://www.google.com",
+    shopLink: "https://www.iguatemi365.com/catalogsearch/result/?q=Terrazas",
     image: IguatemiImage,
   },
   {
