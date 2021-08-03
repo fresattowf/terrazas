@@ -24,7 +24,6 @@ export const WhereToBuy: React.FC<WhereToBuyProps> = ({ placeData }) => {
 
       <Wrapper>
         <div>
-          <strong>R$ 319,00</strong>
           <span>Disponível</span>
         </div>
 
