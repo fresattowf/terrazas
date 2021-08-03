@@ -37,6 +37,10 @@ export const VideoWrapper = styled.a`
 
   text-decoration: none;
 
+  @media (max-width: 320px) {
+    height: 280px;
+  }
+
   img {
     display: block;
     margin: 0 auto 12px;

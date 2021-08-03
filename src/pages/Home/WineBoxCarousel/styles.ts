@@ -152,9 +152,17 @@ export const Description = styled.p`
   font-weight: 400;
   color: var(--gold);
 
+  ul {
+    margin-left: 20px;
+  }
+
   @media (min-width: 768px) {
     order: 2;
     padding-left: 25px;
+
+    ul {
+      margin-left: 0;
+    }
   }
 `;
 

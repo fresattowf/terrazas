@@ -16,6 +16,7 @@ import {
   BottleWrapper,
   BottleImage,
   BottleBackground,
+  StyledDot,
 } from "./styles";
 
 const WinesCarouselSection: React.FC = () => {
@@ -25,12 +26,19 @@ const WinesCarouselSection: React.FC = () => {
     <Container>
       <Mobile>
         <Carousel
-          showIndicators={false}
+          showIndicators
           autoPlay={false}
           showArrows={false}
           showStatus={false}
           interval={10000000000}
           showThumbs={false}
+          renderIndicator={(clickHandler, isSelected, index) => {
+            return (
+              <StyledDot onClick={clickHandler} isSelected={isSelected}>
+                <span />
+              </StyledDot>
+            );
+          }}
           onChange={(index) => {
             setCurrentWineIndex(index);
           }}

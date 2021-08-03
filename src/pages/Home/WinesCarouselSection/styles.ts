@@ -3,8 +3,37 @@ import styled from "styled-components";
 export const Container = styled.div``;
 
 export const Mobile = styled.div`
+  .carousel.carousel-slider {
+    padding-bottom: 20px;
+  }
+
+  .control-dots {
+    display: flex;
+    justify-content: center;
+    bottom: 8px;
+  }
+
   @media (min-width: 768px) {
     display: none;
+  }
+`;
+
+interface StyledDotProps {
+  isSelected: boolean;
+}
+
+export const StyledDot = styled.button<StyledDotProps>`
+  border: 0;
+  background-color: transparent;
+  margin: 0 5px;
+
+  span {
+    width: 8px;
+    height: 8px;
+    background-color: ${(props) => (props.isSelected ? "#000" : "#a09f9f")};
+    display: block;
+
+    border-radius: 50%;
   }
 `;
 
