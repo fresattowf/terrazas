@@ -24,7 +24,11 @@ export const Container = styled.div`
   }
 `;
 
-export const MobileCarousel = styled(Carousel)`
+export const MobileCarousel = styled.div`
+  display: flex;
+  overflow-x: scroll;
+  padding-left: 25px;
+
   @media (min-width: 768px) {
     display: none;
   }
@@ -33,8 +37,11 @@ export const MobileCarousel = styled(Carousel)`
 export const StyledShopCard = styled(ShopCard)`
   margin: 0 auto;
 
+  margin-right: 25px;
+
   @media (min-width: 768px) {
     width: calc(100% - 10px);
+    margin-right: 0;
   }
 `;
 

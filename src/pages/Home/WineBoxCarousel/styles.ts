@@ -57,6 +57,16 @@ export const StyledContentContainer = styled(ContentContainer)`
 export const MobileCarousel = styled(Carousel)`
   transform: translateY(-35px);
 
+  .carousel.carousel-slider {
+    padding-bottom: 20px;
+  }
+
+  .control-dots {
+    display: flex;
+    justify-content: center;
+    bottom: 8px;
+  }
+
   @media (min-width: 768px) {
     display: none;
   }
@@ -110,6 +120,25 @@ export const WineBoxImage = styled.img<WineBoxImageInterface>`
     css`
       margin-left: 22px;
     `}
+`;
+
+interface StyledDotProps {
+  isSelected: boolean;
+}
+
+export const StyledDot = styled.button<StyledDotProps>`
+  border: 0;
+  background-color: transparent;
+  margin: 0 5px;
+
+  span {
+    width: 8px;
+    height: 8px;
+    background-color: ${(props) => (props.isSelected ? "#000" : "#a09f9f")};
+    display: block;
+
+    border-radius: 50%;
+  }
 `;
 
 export const Title = styled.h3`

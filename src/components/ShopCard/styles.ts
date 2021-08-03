@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 180px;
+  width: calc(50% - -10px);
   border-radius: 2px;
   background-color: #fff;
 
   padding: 22px;
+
+  flex-shrink: 0;
+
+  margin-right: 25px;
+
+  span,
+  strong {
+    text-align: center;
+  }
 
   span {
     display: block;
@@ -20,8 +29,8 @@ export const Container = styled.div`
     color: var(--wine);
     margin-top: 8px;
   }
-
   @media (min-width: 768px) {
+    width: 180px;
     span,
     strong {
       text-align: center;
@@ -30,6 +39,10 @@ export const Container = styled.div`
 `;
 
 export const LogoWrapper = styled.div`
+  height: 64px;
+  display: flex;
+  align-items: center;
+
   @media (min-width: 768px) {
     height: 64px;
     display: flex;
@@ -40,6 +53,7 @@ export const LogoWrapper = styled.div`
 export const LogoImage = styled.img`
   max-width: 80px;
   width: 100%;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
     margin: 0 auto;
@@ -70,6 +84,7 @@ export const LogoImage = styled.img`
 
 export const WineImage = styled.img`
   margin: 5px 0;
+  width: 100%;
 
   @media (min-width: 768px) {
     width: 100%;

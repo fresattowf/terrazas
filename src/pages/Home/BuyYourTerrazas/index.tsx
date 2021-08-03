@@ -10,14 +10,7 @@ const BuyYourTerrazas: React.FC = () => {
         Compre seu Terrazas Reserva com um preço especial nas lojas abaixo.
       </h1>
 
-      <MobileCarousel
-        showArrows={false}
-        autoPlay={true}
-        showIndicators={false}
-        showStatus={false}
-        interval={5000000}
-        showThumbs={false}
-      >
+      <MobileCarousel>
         {shops.map((shop) => (
           <StyledShopCard key={shop.name} data={shop} />
         ))}

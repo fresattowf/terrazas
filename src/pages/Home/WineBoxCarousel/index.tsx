@@ -10,6 +10,7 @@ import WesselImage from "../../../images/wessel.png";
 import {
   Container,
   StyledContentContainer,
+  StyledDot,
   MobileCarousel,
   DesktopCarousel,
   CarouselItemWrapper,
@@ -60,11 +61,17 @@ const WineBoxCarousel: React.FC = () => {
       <StyledContentContainer>
         <MobileCarousel
           showArrows={false}
-          showIndicators={false}
           autoPlay={false}
           showStatus={false}
           showThumbs={false}
           interval={1000000000}
+          renderIndicator={(clickHandler, isSelected, index) => {
+            return (
+              <StyledDot onClick={clickHandler} isSelected={isSelected}>
+                <span />
+              </StyledDot>
+            );
+          }}
         >
           <CarouselItemWrapper>
             <WineBoxImage src={WineBoxOpened} alt="Wine Box opened" />
