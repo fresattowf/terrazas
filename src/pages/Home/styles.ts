@@ -68,6 +68,18 @@ export const StyledContentContainer = styled(ContentContainer)`
     }
   }
 
+  @media (min-width: 900px) {
+    > div {
+      margin-left: 70px;
+    }
+  }
+
+  @media (min-width: 1142px) {
+    > div {
+      margin-left: 124px;
+    }
+  }
+
   @media (min-width: 1292px) {
     > div {
       margin-left: 100px;

@@ -89,11 +89,15 @@ export const DesktopCarousel = styled(Carousel)`
   }
 
   @media (max-width: 1292px) {
-    position: relative;
-    width: 80%;
+    top: -53px;
+    left: -10px;
+    width: 730px;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1142px) {
+    top: 87px;
+    left: 52px;
+    width: 510px;
   }
 
   @media (max-width: 768px) {
