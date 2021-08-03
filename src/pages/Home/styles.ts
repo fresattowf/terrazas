@@ -67,6 +67,18 @@ export const StyledContentContainer = styled(ContentContainer)`
       }
     }
   }
+
+  @media (min-width: 1292px) {
+    > div {
+      margin-left: 100px;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    > div {
+      margin-left: 0;
+    }
+  }
 `;
 
 export const TerrazasImage = styled.img`
