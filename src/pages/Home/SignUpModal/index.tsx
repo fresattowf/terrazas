@@ -1,6 +1,11 @@
 import React, { FormEvent, useState } from "react";
+
 import { countries } from "../../../data/countries";
+import { days } from "../../../data/days";
 import { languages } from "../../../data/languages";
+import { months } from "../../../data/months";
+import { years } from "../../../data/years";
+
 import {
   AgreementConfirmationWrapper,
   CheckBoxWrapper,
@@ -53,8 +58,27 @@ const SignUpModal: React.FC = () => {
         </SideBySideWrapper>
         <SideBySideWrapper>
           <div className="input-wrapper">
-            <label htmlFor="">Primeiro nome *</label>
-            <input type="text" placeholder="Primeiro nome" />
+            <label htmlFor="">Data de nascimento* </label>
+            <div className="birthday-wrapper">
+              <StyledSelect
+                options={days}
+                isSearchable={false}
+                placeholder="Dia"
+                onChange={() => {}}
+              />
+              <StyledSelect
+                options={months}
+                isSearchable={false}
+                placeholder="Mês"
+                onChange={() => {}}
+              />
+              <StyledSelect
+                options={years}
+                isSearchable={false}
+                placeholder="Ano"
+                onChange={() => {}}
+              />
+            </div>
           </div>
           <div className="input-wrapper">
             <label htmlFor="">Preferência de idioma *</label>

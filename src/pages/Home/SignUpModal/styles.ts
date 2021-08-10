@@ -151,4 +151,10 @@ export const Container = styled(Modal).attrs((props) => ({
       border-radius: 0;
     }
   }
+
+  .birthday-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+  }
 `;
