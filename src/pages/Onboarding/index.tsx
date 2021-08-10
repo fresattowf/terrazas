@@ -6,8 +6,8 @@ import TerrazasLogo from "../../images/terrazas.png";
 
 import { Container, Content, InputWrapper, Button, Footer } from "./styles";
 
-import { years } from "./years";
-import { countries } from "./countries";
+import { years } from "../../data/years";
+import { countries } from "../../data/countries";
 
 const Onboarding: React.FC = () => {
   const history = useHistory();
