@@ -6,6 +6,7 @@ import { WineBoxCarousel } from "./WineBoxCarousel";
 import { BuyYourTerrazas } from "./BuyYourTerrazas";
 import { VideoSection } from "./VideoSection";
 import { WinesCarouselSection } from "./WinesCarouselSection";
+import { SignUpModal } from "./SignUpModal";
 
 import Logo from "../../images/logo.png";
 
@@ -19,29 +20,33 @@ import {
 
 const Home: React.FC = () => {
   return (
-    <Container>
-      <Header>
-        <StyledContentContainer>
-          <div>
-            <TerrazasImage src={Logo} alt="Terrazas by wessel" />
+    <>
+      <Container>
+        <Header>
+          <StyledContentContainer>
+            <div>
+              <TerrazasImage src={Logo} alt="Terrazas by wessel" />
 
-            <h1>O melhor presente é um brinde especial.</h1>
-            <h2>Neste dia dos Pais surpreenda com Terrazas de los Andes.</h2>
-          </div>
-        </StyledContentContainer>
-      </Header>
+              <h1>O melhor presente é um brinde especial.</h1>
+              <h2>Neste dia dos Pais surpreenda com Terrazas de los Andes.</h2>
+            </div>
+          </StyledContentContainer>
+        </Header>
 
-      <WineBoxCarousel />
+        <WineBoxCarousel />
 
-      <BuyYourTerrazas />
+        <BuyYourTerrazas />
 
-      <StripeBG>
-        <VideoSection />
-        <WinesCarouselSection />
-      </StripeBG>
+        <StripeBG>
+          <VideoSection />
+          <WinesCarouselSection />
+        </StripeBG>
 
-      <Footer />
-    </Container>
+        <Footer />
+      </Container>
+
+      <SignUpModal />
+    </>
   );
 };
 
