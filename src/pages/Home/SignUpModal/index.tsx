@@ -1,10 +1,13 @@
 import React, { FormEvent, useState } from "react";
+import { countries } from "../../../data/countries";
+import { languages } from "../../../data/languages";
 import {
   AgreementConfirmationWrapper,
   CheckBoxWrapper,
   Container,
   SideBySideWrapper,
   SubmitButton,
+  StyledSelect,
 } from "./styles";
 
 const SignUpModal: React.FC = () => {
@@ -39,8 +42,13 @@ const SignUpModal: React.FC = () => {
         </SideBySideWrapper>
         <SideBySideWrapper>
           <div className="input-wrapper">
-            <label htmlFor="">Primeiro nome *</label>
-            <input type="text" placeholder="Primeiro nome" />
+            <label htmlFor="">Local de residência *</label>
+            <StyledSelect
+              options={countries}
+              isSearchable={false}
+              placeholder="Local de residência"
+              onChange={() => {}}
+            />
           </div>
         </SideBySideWrapper>
         <SideBySideWrapper>
@@ -50,7 +58,12 @@ const SignUpModal: React.FC = () => {
           </div>
           <div className="input-wrapper">
             <label htmlFor="">Preferência de idioma *</label>
-            <input type="text" placeholder="Preferência de idioma" />
+            <StyledSelect
+              options={languages}
+              isSearchable={false}
+              placeholder="Preferência de idioma"
+              onChange={() => {}}
+            />
           </div>
         </SideBySideWrapper>
         <div className="input-wrapper">
