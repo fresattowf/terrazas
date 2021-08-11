@@ -28,6 +28,24 @@ export const TitleWrapper = styled.div`
       margin-right: 8px;
     }
   }
+
+  @media (max-width: 568px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    > div {
+      flex-direction: column;
+      align-items: flex-start;
+
+      margin-left: 0;
+      margin-top: 8px;
+    }
+
+    .radio-group {
+      margin-left: 0;
+      margin-bottom: 8px;
+    }
+  }
 `;
 
 export const SideBySideWrapper = styled.div`
@@ -39,6 +57,16 @@ export const SideBySideWrapper = styled.div`
 
   small {
     margin-left: 8px;
+  }
+
+  @media (max-width: 568px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+
+    .input-wrapper {
+      margin-bottom: 20px;
+    }
   }
 `;
 
@@ -111,6 +139,8 @@ export const SubmitButton = styled.button`
   }
 `;
 
+export const Wrapper = styled.div``;
+
 export const Container = styled(Modal).attrs((props) => ({
   style: {
     overlay: {
@@ -159,6 +189,14 @@ export const Container = styled(Modal).attrs((props) => ({
       &:hover {
         opacity: 0.7;
       }
+    }
+  }
+
+  @media (max-width: 568px) {
+    header {
+      height: 40px;
+      padding-top: 5px;
+      justify-content: center;
     }
   }
 

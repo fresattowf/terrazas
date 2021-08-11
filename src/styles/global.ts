@@ -32,6 +32,14 @@ export default createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased;
+
+    @media (max-width: 568px) {
+      .sign-up-modal {
+        height: 90vh !important;
+        width: 90vw !important;
+        padding: 20px !important;
+      }
+    }
   }
 
   html, body, #root {
