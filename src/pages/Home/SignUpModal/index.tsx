@@ -5,6 +5,7 @@ import * as Yup from "yup";
 
 import Input from "../../../components/Input";
 import Select from "../../../components/Select";
+import Radio from "../../../components/Radio";
 
 import { countries } from "../../../data/countries";
 import { days } from "../../../data/days";
@@ -18,6 +19,7 @@ import {
   AgreementConfirmationWrapper,
   CheckBoxWrapper,
   Container,
+  TitleWrapper,
   SideBySideWrapper,
   SubmitButton,
 } from "./styles";
@@ -92,6 +94,23 @@ const SignUpModal: React.FC = () => {
         </button>
       </header>
       <Form ref={formRef} onSubmit={handleSubmit}>
+        <TitleWrapper>
+          <span>Título</span>
+          <div>
+            <div className="radio-group">
+              <input type="radio" name="title" id="mr" />
+              <label htmlFor="mr">Senhor.</label>
+            </div>
+            <div className="radio-group">
+              <input type="radio" name="title" id="ms" />
+              <label htmlFor="ms">Senhora.</label>
+            </div>
+            <div className="radio-group">
+              <input type="radio" name="title" id="pnr" />
+              <label htmlFor="pnr">Prefere não responder</label>
+            </div>
+          </div>
+        </TitleWrapper>
         <SideBySideWrapper>
           <div className="input-wrapper">
             <Input

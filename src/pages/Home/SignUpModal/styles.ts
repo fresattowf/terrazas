@@ -1,6 +1,34 @@
-import styled, { CSSObject } from "styled-components";
+import styled from "styled-components";
 import Modal from "react-modal";
-import Select from "react-select";
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 16px;
+
+  color: #4b4b4b;
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    margin-left: 8px;
+  }
+
+  .radio-group {
+    display: flex;
+    align-items: center;
+
+    margin-left: 16px;
+
+    cursor: pointer;
+
+    input {
+      margin-right: 8px;
+    }
+  }
+`;
 
 export const SideBySideWrapper = styled.div`
   display: grid;
