@@ -1,4 +1,9 @@
-import React, { FormEvent, useState } from "react";
+import React, { useState } from "react";
+import { Form } from "@unform/web";
+import { SubmitHandler } from "@unform/core";
+
+import Input from "../../../components/Input";
+import Select from "../../../components/Select";
 
 import { countries } from "../../../data/countries";
 import { days } from "../../../data/days";
@@ -12,7 +17,6 @@ import {
   Container,
   SideBySideWrapper,
   SubmitButton,
-  StyledSelect,
 } from "./styles";
 
 const SignUpModal: React.FC = () => {
@@ -22,9 +26,11 @@ const SignUpModal: React.FC = () => {
     setModalIsOpen(false);
   }
 
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault();
-  }
+  const handleSubmit: SubmitHandler = (data, helpers, event) => {
+    event?.preventDefault();
+
+    console.log(data);
+  };
 
   return (
     <Container
@@ -34,21 +40,28 @@ const SignUpModal: React.FC = () => {
       contentLabel="Example Modal"
       // style={customStyles}
     >
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <SideBySideWrapper>
           <div className="input-wrapper">
-            <label htmlFor="">Primeiro nome *</label>
-            <input type="text" placeholder="Primeiro nome" />
+            <Input
+              label="Primeiro nome *"
+              name="firstName"
+              placeholder="Primeiro nome"
+            />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="">Sobrenome *</label>
-            <input type="text" placeholder="Sobrenome" />
+            <Input
+              label="Sobrenome *"
+              name="lastName"
+              placeholder="Sobrenome"
+            />
           </div>
         </SideBySideWrapper>
         <SideBySideWrapper>
           <div className="input-wrapper">
             <label htmlFor="">Local de residência *</label>
-            <StyledSelect
+            <Select
+              name="contry"
               options={countries}
               isSearchable={false}
               placeholder="Local de residência"
@@ -60,19 +73,22 @@ const SignUpModal: React.FC = () => {
           <div className="input-wrapper">
             <label htmlFor="">Data de nascimento* </label>
             <div className="birthday-wrapper">
-              <StyledSelect
+              <Select
+                name="day"
                 options={days}
                 isSearchable={false}
                 placeholder="Dia"
                 onChange={() => {}}
               />
-              <StyledSelect
+              <Select
+                name="month"
                 options={months}
                 isSearchable={false}
                 placeholder="Mês"
                 onChange={() => {}}
               />
-              <StyledSelect
+              <Select
+                name="year"
                 options={years}
                 isSearchable={false}
                 placeholder="Ano"
@@ -82,7 +98,8 @@ const SignUpModal: React.FC = () => {
           </div>
           <div className="input-wrapper">
             <label htmlFor="">Preferência de idioma *</label>
-            <StyledSelect
+            <Select
+              name="language"
               options={languages}
               isSearchable={false}
               placeholder="Preferência de idioma"
@@ -91,8 +108,7 @@ const SignUpModal: React.FC = () => {
           </div>
         </SideBySideWrapper>
         <div className="input-wrapper">
-          <label htmlFor="">Email *</label>
-          <input type="text" placeholder="email@exemplo.com" />
+          <Input label="Email *" name="email" placeholder="email@exemplo.com" />
         </div>
 
         <AgreementConfirmationWrapper>
@@ -141,8 +157,8 @@ const SignUpModal: React.FC = () => {
           </p>
         </CheckBoxWrapper>
 
-        <SubmitButton type="button">Enviar</SubmitButton>
-      </form>
+        <SubmitButton type="submit">Enviar</SubmitButton>
+      </Form>
     </Container>
   );
 };
