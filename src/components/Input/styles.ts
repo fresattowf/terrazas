@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps {
+  error?: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   label {
     margin: 0 0 3px;
     font-weight: 100;
@@ -14,7 +18,7 @@ export const Container = styled.div`
     display: block;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid gray;
+    border: 1px solid;
     height: 40px;
     background: #ffffff;
     -webkit-appearance: none;
@@ -22,5 +26,7 @@ export const Container = styled.div`
     font-size: 16px;
     font-weight: 100;
     border-radius: 0;
+
+    border-color: ${(props) => (props.error ? "red" : "gray")};
   }
 `;

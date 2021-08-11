@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Form } from "@unform/web";
-import { SubmitHandler } from "@unform/core";
+import { FormHandles, SubmitHandler } from "@unform/core";
+import * as Yup from "yup";
 
 import Input from "../../../components/Input";
 import Select from "../../../components/Select";
@@ -20,16 +21,50 @@ import {
 } from "./styles";
 
 const SignUpModal: React.FC = () => {
+  const formRef = useRef<FormHandles>(null);
   const [modalIsOpen, setModalIsOpen] = useState(true);
 
   function closeModal() {
     setModalIsOpen(false);
   }
 
-  const handleSubmit: SubmitHandler = (data, helpers, event) => {
+  const handleSubmit: SubmitHandler = async (data, _, event) => {
     event?.preventDefault();
 
     console.log(data);
+
+    try {
+      formRef.current?.setErrors({});
+
+      const schema = Yup.object().shape({
+        country: Yup.string().required(),
+        day: Yup.string().required(),
+        email: Yup.string().required(),
+        firstName: Yup.string().required(),
+        language: Yup.string().required(),
+        lastName: Yup.string().required(),
+        month: Yup.string().required(),
+        year: Yup.string().required(),
+      });
+
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+
+      // Validation passed
+      console.log(data);
+    } catch (err) {
+      const validationErrors: { [e: string]: string } = {};
+
+      if (err instanceof Yup.ValidationError) {
+        err.inner.forEach((error) => {
+          if (error.path) {
+            validationErrors[error.path] = error.message;
+          }
+        });
+        formRef.current?.setErrors(validationErrors);
+      }
+    }
   };
 
   return (
@@ -40,7 +75,7 @@ const SignUpModal: React.FC = () => {
       contentLabel="Example Modal"
       // style={customStyles}
     >
-      <Form onSubmit={handleSubmit}>
+      <Form ref={formRef} onSubmit={handleSubmit}>
         <SideBySideWrapper>
           <div className="input-wrapper">
             <Input
@@ -61,7 +96,7 @@ const SignUpModal: React.FC = () => {
           <div className="input-wrapper">
             <label htmlFor="">Local de residência *</label>
             <Select
-              name="contry"
+              name="country"
               options={countries}
               isSearchable={false}
               placeholder="Local de residência"

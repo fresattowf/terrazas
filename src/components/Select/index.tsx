@@ -39,6 +39,7 @@ export default function Select({ name, label, ...rest }: Props) {
         defaultValue={defaultValue}
         ref={selectRef}
         classNamePrefix="react-select"
+        error={error}
         {...rest}
       />
     </Container>

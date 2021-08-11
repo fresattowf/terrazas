@@ -31,15 +31,15 @@ export default function Input({ name, label, ...rest }: InputProps) {
   }, [fieldName, registerField]);
 
   return (
-    <Container>
+    <Container error={!!error}>
       {label && <label htmlFor={fieldName}>{label}</label>}
       <input
         id={fieldName}
         ref={inputRef}
+        // error={error}
         defaultValue={defaultValue}
         {...rest}
       />
-      {error && <span>{error}</span>}
     </Container>
   );
 }

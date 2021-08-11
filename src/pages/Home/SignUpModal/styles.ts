@@ -99,21 +99,6 @@ export const Container = styled(Modal).attrs((props) => ({
       font-size: 12px;
       display: block;
     }
-
-    input {
-      width: 100%;
-      display: block;
-      padding: 10px;
-      box-sizing: border-box;
-      border: 1px solid gray;
-      height: 40px;
-      background: #ffffff;
-      -webkit-appearance: none;
-      outline: none;
-      font-size: 16px;
-      font-weight: 100;
-      border-radius: 0;
-    }
   }
 
   .birthday-wrapper {
