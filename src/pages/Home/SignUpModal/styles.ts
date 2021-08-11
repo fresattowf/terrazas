@@ -95,12 +95,41 @@ export const Container = styled(Modal).attrs((props) => ({
       WebkitOverflowScrolling: "touch",
       borderRadius: "4px",
       outline: "none",
-      padding: "40px",
+      padding: "0 40px 40px",
       maxWidth: 603,
       width: "100%",
     },
   },
 }))`
+  header {
+    height: 110px;
+    padding-top: 20px;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+
+    > button {
+      display: flex;
+      align-items: center;
+
+      border: 0;
+      background-color: transparent;
+
+      transition: 200ms;
+
+      span {
+        margin-right: -45px;
+        font-size: 14px;
+        font-family: "Roboto";
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
   .input-wrapper {
     label {
       margin: 0 0 3px;

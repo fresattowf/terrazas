@@ -12,6 +12,8 @@ import { languages } from "../../../data/languages";
 import { months } from "../../../data/months";
 import { years } from "../../../data/years";
 
+import CloseImg from "../../../images/close.svg";
+
 import {
   AgreementConfirmationWrapper,
   CheckBoxWrapper,
@@ -75,11 +77,20 @@ const SignUpModal: React.FC = () => {
   return (
     <Container
       isOpen={modalIsOpen}
-      // onAfterOpen={afterOpenModal}
       onRequestClose={closeModal}
       contentLabel="Example Modal"
-      // style={customStyles}
     >
+      <header>
+        <button
+          type="button"
+          onClick={() => {
+            setModalIsOpen(false);
+          }}
+        >
+          <span>fechar</span>
+          <img src={CloseImg} alt="Fechar" />
+        </button>
+      </header>
       <Form ref={formRef} onSubmit={handleSubmit}>
         <SideBySideWrapper>
           <div className="input-wrapper">
