@@ -141,7 +141,14 @@ const SignUpModal: React.FC = () => {
         </SideBySideWrapper>
         <SideBySideWrapper>
           <div className="input-wrapper">
-            <label htmlFor="">Data de nascimento* </label>
+            <div>
+              <label htmlFor="">
+                Data de nascimento*
+                <small>
+                  você deve ser maior de idade para assinar a nossa newsletter
+                </small>
+              </label>
+            </div>
             <div className="birthday-wrapper">
               <Select
                 name="day"

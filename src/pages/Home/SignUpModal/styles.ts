@@ -36,6 +36,10 @@ export const SideBySideWrapper = styled.div`
   column-gap: 10px;
 
   margin-bottom: 20px;
+
+  small {
+    margin-left: 8px;
+  }
 `;
 
 export const AgreementConfirmationWrapper = styled.div`
@@ -159,6 +163,10 @@ export const Container = styled(Modal).attrs((props) => ({
   }
 
   .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     label {
       margin: 0 0 3px;
       font-weight: 100;
