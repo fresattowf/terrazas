@@ -29,7 +29,11 @@ export const AgreementConfirmationWrapper = styled.div`
   }
 `;
 
-export const CheckBoxWrapper = styled.div`
+interface CheckBoxWrapperProps {
+  error?: boolean;
+}
+
+export const CheckBoxWrapper = styled.div<CheckBoxWrapperProps>`
   display: flex;
   margin: 20px 0;
 
@@ -40,7 +44,7 @@ export const CheckBoxWrapper = styled.div`
 
   p {
     font-weight: 100;
-    color: #4b4b4b;
+    color: ${(props) => (props.error ? "red" : "#4b4b4b")};
     font-size: 11px;
     line-height: 1.5;
     padding: 0 0 0 0px;
@@ -67,6 +71,12 @@ export const SubmitButton = styled.button`
 
   display: block;
   margin: 0 auto;
+
+  transition: opacity 200ms;
+
+  &:hover {
+    opacity: 0.9;
+  }
 `;
 
 export const Container = styled(Modal).attrs((props) => ({

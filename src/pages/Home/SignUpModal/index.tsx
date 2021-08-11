@@ -23,6 +23,8 @@ import {
 const SignUpModal: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const [modalIsOpen, setModalIsOpen] = useState(true);
+  const [termsIsChecked, setTermsIsChecked] = useState(false);
+  const [termsHasError, setTermsHasError] = useState(false);
 
   function closeModal() {
     setModalIsOpen(false);
@@ -31,10 +33,13 @@ const SignUpModal: React.FC = () => {
   const handleSubmit: SubmitHandler = async (data, _, event) => {
     event?.preventDefault();
 
-    console.log(data);
-
     try {
       formRef.current?.setErrors({});
+
+      if (!termsIsChecked) {
+        setTermsHasError(true);
+        throw new Error("Terms is required");
+      }
 
       const schema = Yup.object().shape({
         country: Yup.string().required(),
@@ -162,8 +167,17 @@ const SignUpModal: React.FC = () => {
           </p>
         </AgreementConfirmationWrapper>
 
-        <CheckBoxWrapper>
-          <input type="checkbox" name="agree" id="agree" />
+        <CheckBoxWrapper error={termsHasError}>
+          <input
+            type="checkbox"
+            name="agree"
+            id="agree"
+            onChange={(e) => {
+              setTermsHasError(false);
+              setTermsIsChecked(!termsIsChecked);
+            }}
+            checked={termsIsChecked}
+          />
 
           <p>
             Estou interessado nas outras marcas do grupo{" "}
