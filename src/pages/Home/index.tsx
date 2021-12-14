@@ -3,6 +3,7 @@ import React from "react";
 import { Footer } from "../../components/Footer";
 
 import { WineBoxCarousel } from "./WineBoxCarousel";
+import { Kits } from "./Kits";
 import { BuyYourTerrazas } from "./BuyYourTerrazas";
 import { VideoSection } from "./VideoSection";
 import { WinesCarouselSection } from "./WinesCarouselSection";
@@ -34,6 +35,8 @@ const Home: React.FC = () => {
         </Header>
 
         <WineBoxCarousel />
+
+        <Kits />
 
         <BuyYourTerrazas />
 
