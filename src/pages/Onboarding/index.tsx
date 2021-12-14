@@ -122,11 +122,15 @@ const Onboarding: React.FC = () => {
           <p>
             A Terrazas de los Andes apoia o consumo de seus vinhos com
             responsabilidade pela Moët Hennessy, integrante da SpiritEurope (
-            <a href="http://www.responsibledrinking.eu" target="_blank">
+            <a
+              href="http://www.responsibledrinking.eu"
+              target="_blank"
+              rel="noreferrer"
+            >
               www.responsibledrinking.eu
             </a>
             ) e da DISCUS (
-            <a href="http://www.discus.org" target="_blank">
+            <a href="http://www.discus.org" target="_blank" rel="noreferrer">
               www.discus.org
             </a>
             ).

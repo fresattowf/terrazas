@@ -5,7 +5,6 @@ import * as Yup from "yup";
 
 import Input from "../../../components/Input";
 import Select from "../../../components/Select";
-import Radio from "../../../components/Radio";
 
 import { countries } from "../../../data/countries";
 import { days } from "../../../data/days";

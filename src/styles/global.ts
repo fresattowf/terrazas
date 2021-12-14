@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import bgStipes from "../images/bg-stripes-2.png";
 
 export default createGlobalStyle`
   :root {

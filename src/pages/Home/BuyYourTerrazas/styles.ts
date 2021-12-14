@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Carousel } from "react-responsive-carousel";
 
 import ShopCard from "../../../components/ShopCard";
 
