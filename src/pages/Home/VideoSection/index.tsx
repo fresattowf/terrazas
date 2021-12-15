@@ -17,6 +17,7 @@ const VideoSection: React.FC = () => {
   return (
     <Container>
       <StyledContentContainer>
+        <h3>Vídeos</h3>
         <Videos>
           <StyledVideoPreview
             image={Video1}

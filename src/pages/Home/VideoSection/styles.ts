@@ -5,7 +5,7 @@ import TerrazasImage from "../../../images/terrazas.png";
 import VideoPreview from "./VideoPreview";
 
 export const Container = styled.div`
-  padding: 30px 0;
+  padding: 52px 0 30px;
 
   @media (min-width: 768px) {
     padding: 90px 0 30px;
@@ -13,6 +13,16 @@ export const Container = styled.div`
 `;
 
 export const StyledContentContainer = styled(ContentContainer)`
+  > h3 {
+    font-family: "Merriweather";
+
+    font-size: 27px;
+    text-align: center;
+    color: #000;
+
+    margin-bottom: 15px;
+  }
+
   @media (min-width: 768px) {
     max-width: 1479px;
     margin: 0px auto;
