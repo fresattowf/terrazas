@@ -53,4 +53,23 @@ export const Container = styled.a<ContainerProps>`
 
     margin-top: auto;
   }
+
+  @media (min-width: 768px) {
+    padding: 52px 60px;
+
+    > img {
+      margin-top: 105px;
+    }
+
+    img {
+      width: 71px;
+      height: 71px;
+    }
+
+    p {
+      font-size: 21px;
+      line-height: 26px;
+      font-weight: 500;
+    }
+  }
 `;

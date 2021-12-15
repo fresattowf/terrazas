@@ -6,10 +6,6 @@ import VideoPreview from "./VideoPreview";
 
 export const Container = styled.div`
   padding: 52px 0 30px;
-
-  @media (min-width: 768px) {
-    padding: 90px 0 30px;
-  }
 `;
 
 export const StyledContentContainer = styled(ContentContainer)`
@@ -25,8 +21,12 @@ export const StyledContentContainer = styled(ContentContainer)`
 
   @media (min-width: 768px) {
     max-width: 1479px;
-    margin: 0px auto;
     width: 100%;
+    margin: 0px auto;
+
+    > h3 {
+      font-size: 46px;
+    }
   }
 `;
 
@@ -36,7 +36,7 @@ export const Videos = styled.div`
     grid-template-columns: repeat(3, 1fr);
     height: 459px;
 
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
   }
 `;
@@ -47,10 +47,13 @@ export const StyledVideoPreview = styled(VideoPreview)`
   margin-bottom: 16px;
 
   @media (min-width: 768px) {
+    height: 100% !important;
     border-radius: 0;
 
     background-position: unset;
     background-size: unset;
+
+    margin-bottom: 0;
   }
 `;
 

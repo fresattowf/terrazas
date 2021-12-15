@@ -28,14 +28,14 @@ const VideoSection: React.FC = () => {
           />
           <StyledVideoPreview
             image={Video2}
-            href="https://youtu.be/x_lgQknWl5s"
+            href="https://www.youtube.com/watch?v=XojefwViVpE&ab_channel=TerrazasdeLosAndesBrasil"
             title="Assista o vídeo"
             description="Veja a masterclass “Harmonizando Terrazas com Churrasco” por István
             Wessel e François Hauketeur"
           />
           <StyledVideoPreview
             image={Video3}
-            href="https://youtu.be/x_lgQknWl5s"
+            href="https://www.youtube.com/watch?v=WOTw_bnNXk4&ab_channel=TerrazasdeLosAndesBrasil"
             title="Assista o vídeo"
             description="Veja a masterclass “Harmonizando Terrazas com Churrasco” por István
             Wessel e François Hauketeur"
