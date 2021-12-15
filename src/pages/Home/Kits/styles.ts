@@ -132,3 +132,27 @@ export const StyledCarousel = styled(Carousel)`
     display: block;
   }
 `;
+
+export const ControlsWrapper = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 18px;
+      height: 18px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 0 6px;
+
+      transition: background-color 200ms;
+
+      &.active {
+        background: #000;
+      }
+    }
+  }
+`;

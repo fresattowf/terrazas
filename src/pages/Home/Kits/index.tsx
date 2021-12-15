@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Container,
@@ -6,6 +6,7 @@ import {
   WineWrapper,
   ImageWrapper,
   StyledCarousel,
+  ControlsWrapper,
 } from "./styles";
 
 const wines = [
@@ -36,6 +37,8 @@ const wines = [
 ];
 
 const Kits: React.FC = () => {
+  const [selectedItem, setSelectedItem] = useState(0);
+
   function renderKits() {
     return wines.map(({ image, title, description, link }, i) => (
       <WineWrapper key={title}>
@@ -66,9 +69,24 @@ const Kits: React.FC = () => {
         showArrows={false}
         showIndicators={false}
         showStatus={false}
+        selectedItem={selectedItem}
+        onChange={(i) => setSelectedItem(i)}
       >
         {renderKits()}
       </StyledCarousel>
+
+      <ControlsWrapper>
+        {wines.map((_, index) => {
+          return (
+            <button
+              onClick={() => setSelectedItem(index)}
+              className={index === selectedItem ? "active" : ""}
+            >
+              <span />
+            </button>
+          );
+        })}
+      </ControlsWrapper>
     </Container>
   );
 };
