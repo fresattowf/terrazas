@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import ContentContainer from "../../../components/ContentContainer";
 
 export const Container = styled(ContentContainer)`
@@ -62,16 +62,30 @@ export const WineWrapper = styled.div`
   }
 `;
 
-export const ImageWrapper = styled.div`
-  width: 100%;
+interface ImageWrapperProps {
+  noBorder?: boolean;
+}
 
-  border: 1px solid #ededed;
+export const ImageWrapper = styled.div<ImageWrapperProps>`
+  width: 100%;
+  height: 272px;
+
+  border: ${(props) => (props.noBorder ? "none" : "1px solid #ededed")};
   border-radius: 4px;
+  margin-bottom: 20px;
+
+  ${(props) =>
+    !props.noBorder &&
+    css`
+      display: flex;
+      align-items: center;
+    `}
 
   > img {
-    width: 100%;
+    width: ${(props) => (props.noBorder ? "100%" : "95%")};
+    height: ${(props) => (props.noBorder ? "100%" : "200px")};
 
-    margin-bottom: 20px;
+    border-radius: inherit;
   }
 `;
 
