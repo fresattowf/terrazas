@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components";
+import { Carousel } from "react-responsive-carousel";
 import ContentContainer from "../../../components/ContentContainer";
 
 export const Container = styled(ContentContainer)`
   padding: 60px 0 70px;
 
-  > h2 {
+  h2 {
     font-family: "Charter", serif;
     font-size: 44px;
     line-height: 54px;
@@ -12,6 +13,15 @@ export const Container = styled(ContentContainer)`
     color: #404040;
 
     margin-bottom: 48px;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    h2 {
+      text-align: left;
+    }
   }
 `;
 
@@ -60,6 +70,15 @@ export const WineWrapper = styled.div`
       opacity: 0.8;
     }
   }
+
+  @media (max-width: 768px) {
+    a {
+      max-width: 216px;
+      width: 100%;
+
+      margin: 0 auto;
+    }
+  }
 `;
 
 interface ImageWrapperProps {
@@ -87,10 +106,29 @@ export const ImageWrapper = styled.div<ImageWrapperProps>`
 
     border-radius: inherit;
   }
+
+  @media (max-width: 768px) {
+    max-width: 272px;
+    width: 100%;
+
+    margin: 0 auto 21px;
+  }
 `;
 
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 110px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const StyledCarousel = styled(Carousel)`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;

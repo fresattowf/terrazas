@@ -1,6 +1,12 @@
 import React from "react";
 
-import { Container, Wrapper, WineWrapper, ImageWrapper } from "./styles";
+import {
+  Container,
+  Wrapper,
+  WineWrapper,
+  ImageWrapper,
+  StyledCarousel,
+} from "./styles";
 
 const wines = [
   {
@@ -30,31 +36,39 @@ const wines = [
 ];
 
 const Kits: React.FC = () => {
+  function renderKits() {
+    return wines.map(({ image, title, description, link }, i) => (
+      <WineWrapper key={title}>
+        <ImageWrapper noBorder={i === 2}>
+          <img src={image} alt={title} />
+        </ImageWrapper>
+
+        <h3>{title}</h3>
+        <p>{description}</p>
+
+        <a
+          href={link}
+          title={`Comprar ${title}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Comprar
+        </a>
+      </WineWrapper>
+    ));
+  }
+
   return (
     <Container>
       <h2>Kits Experiência Terrazas by Wessel</h2>
-
-      <Wrapper>
-        {wines.map(({ image, title, description, link }, i) => (
-          <WineWrapper key={title}>
-            <ImageWrapper noBorder={i === 2}>
-              <img src={image} alt={title} />
-            </ImageWrapper>
-
-            <h3>{title}</h3>
-            <p>{description}</p>
-
-            <a
-              href={link}
-              title={`Comprar ${title}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Comprar
-            </a>
-          </WineWrapper>
-        ))}
-      </Wrapper>
+      <Wrapper>{renderKits()}</Wrapper>
+      <StyledCarousel
+        showArrows={false}
+        showIndicators={false}
+        showStatus={false}
+      >
+        {renderKits()}
+      </StyledCarousel>
     </Container>
   );
 };
