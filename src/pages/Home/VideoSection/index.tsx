@@ -1,10 +1,13 @@
 import React from "react";
-import PlayerImage from "../../../images/player.png";
+import Video1 from "../../../images/video-image-1.png";
+import Video2 from "../../../images/video-image-2.png";
+import Video3 from "../../../images/video-image-3.png";
 
 import {
   Container,
   StyledContentContainer,
-  VideoWrapper,
+  Videos,
+  StyledVideoPreview,
   TerrazasLogo,
   Paragraph,
   SubTitle,
@@ -14,16 +17,29 @@ const VideoSection: React.FC = () => {
   return (
     <Container>
       <StyledContentContainer>
-        <VideoWrapper href="https://youtu.be/x_lgQknWl5s" target="_blank">
-          <img src={PlayerImage} alt="Player" />
-
-          <strong>Assista o vídeo</strong>
-
-          <p>
-            Veja a masterclass “Harmonizando Terrazas com Churrasco” por István
-            Wessel e François Hauketeur
-          </p>
-        </VideoWrapper>
+        <Videos>
+          <StyledVideoPreview
+            image={Video1}
+            href="https://youtu.be/x_lgQknWl5s"
+            title="Assista o vídeo"
+            description="Veja a masterclass “Harmonizando Terrazas com Churrasco” por István
+            Wessel e François Hauketeur"
+          />
+          <StyledVideoPreview
+            image={Video2}
+            href="https://youtu.be/x_lgQknWl5s"
+            title="Assista o vídeo"
+            description="Veja a masterclass “Harmonizando Terrazas com Churrasco” por István
+            Wessel e François Hauketeur"
+          />
+          <StyledVideoPreview
+            image={Video3}
+            href="https://youtu.be/x_lgQknWl5s"
+            title="Assista o vídeo"
+            description="Veja a masterclass “Harmonizando Terrazas com Churrasco” por István
+            Wessel e François Hauketeur"
+          />
+        </Videos>
 
         <TerrazasLogo />
 

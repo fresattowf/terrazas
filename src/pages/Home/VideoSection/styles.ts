@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 import ContentContainer from "../../../components/ContentContainer";
-import BGVideo from "../../../images/bg-video.png";
-
 import TerrazasImage from "../../../images/terrazas.png";
+
+import VideoPreview from "./VideoPreview";
 
 export const Container = styled.div`
   padding: 30px 0;
@@ -20,78 +20,27 @@ export const StyledContentContainer = styled(ContentContainer)`
   }
 `;
 
-export const VideoWrapper = styled.a`
-  display: block;
+export const Videos = styled.div`
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 459px;
 
-  width: 100%;
-  height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+`;
 
+export const StyledVideoPreview = styled(VideoPreview)`
   border-radius: 12px;
-  padding-top: 65px;
-  padding-bottom: 15px;
 
-  background-image: url(${BGVideo});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 25%;
-
-  text-decoration: none;
-
-  @media (max-width: 320px) {
-    height: 280px;
-  }
-
-  img {
-    display: block;
-    margin: 0 auto 12px;
-    width: 48px;
-    height: 48px;
-  }
-
-  strong {
-    display: block;
-
-    color: #fff;
-    text-align: center;
-
-    margin-top: 16px;
-  }
-
-  p {
-    font-family: "Merriweather";
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: bold;
-    text-align: center;
-    color: #fff;
-    margin-top: 36px;
-  }
+  margin-bottom: 16px;
 
   @media (min-width: 768px) {
-    height: 555px;
-    background-position: center top;
-    background-size: cover;
+    border-radius: 0;
 
-    padding-top: 250px;
-
-    img {
-      width: 70px;
-      height: 70px;
-    }
-
-    strong {
-      font-size: 14px;
-    }
-
-    p {
-      font-size: 24px;
-      line-height: 30px;
-
-      max-width: 854px;
-      width: 100%;
-
-      margin: 100px auto 0;
-    }
+    background-position: unset;
+    background-size: unset;
   }
 `;
 
