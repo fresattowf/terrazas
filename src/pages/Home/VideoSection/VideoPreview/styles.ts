@@ -9,7 +9,7 @@ export const Container = styled.a<ContainerProps>`
   flex-direction: column;
 
   height: 260px;
-  padding: 0 60px 18px;
+  padding: 0 30px 18px;
 
   background-image: linear-gradient(
       0deg,

@@ -34,6 +34,8 @@ export const Videos = styled.div`
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+
     height: 459px;
 
     border-radius: 8px;
@@ -48,7 +50,6 @@ export const StyledVideoPreview = styled(VideoPreview)`
 
   @media (min-width: 768px) {
     height: 100% !important;
-    border-radius: 0;
 
     background-position: unset;
     background-size: unset;
